@@ -1,0 +1,191 @@
+{
+  "main": {
+    "id": "0ed22df8e56475aa",
+    "type": "split",
+    "children": [
+      {
+        "id": "51862c035500cee1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aa411bc45b794cde",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "84a68702b83971bc",
+    "type": "split",
+    "children": [
+      {
+        "id": "2c1e3774fd87adc3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "624a6d352f333a3a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8c57baabc7054ae4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5c407c08975f1624",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 419.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "188a65f5f4721e04",
+    "type": "split",
+    "children": [
+      {
+        "id": "bc8b7936b2bbd81c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6fd5363efacc771b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dee9409e31b14d4f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7b983626760e6367",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f6bc11b76893c6a7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "aa411bc45b794cde",
+  "lastOpenFiles": [
+    "htb/template.md",
+    "htb/antique/template.md",
+    "Github/Ansible.md",
+    "htb/antique/antique.md",
+    "OSCP/Managing Services.md",
+    "OSCP/Managing Rights.md",
+    "htb/htb.md",
+    "OSCP",
+    "Github/screenshots/Pasted image 20240416020803.png",
+    "github.md",
+    "Promox.md",
+    "Github/screenshots/Pasted image 20240416023223.png",
+    "Github/screenshots/Pasted image 20240416022008.png",
+    "Github/screenshots/Pasted image 20240416021731.png",
+    "Github/screenshots/Pasted image 20240416021628.png",
+    "Github/screenshots/Pasted image 20240416021433.png",
+    "Github/screenshots/Pasted image 20240416021207.png",
+    "Github/screenshots",
+    "Github",
+    "Osint/UNS/TheHarvester.md",
+    "htb/wifinetic/wifinetic.md",
+    "htb/cap/cap.md",
+    "htb/antique/exploits/proxy",
+    "htb/antique/exploits/ligolo-ng_proxy_0.5.1_linux_amd64.tar.gz",
+    "htb/antique/exploits/README.md",
+    "htb/antique/exploits/LICENSE",
+    "htb/antique/exploits/chisel/proxy",
+    "htb/antique/exploits/chisel/ligolo-ng_agent_0.5.1_linux_amd64.tar.gz",
+    "htb/antique/exploits/chisel/agent",
+    "htb/antique/exploits/chisel/chisel",
+    "htb/antique/exploits/chisel/test/bench/perf.md",
+    "htb/antique/exploits/chisel/example/reverse-tunneling-authenticated.md",
+    "htb/antique/exploits/chisel/README.md",
+    "htb/caca/nmap/caca.md",
+    "htb/antique/nmap/antique.md",
+    "htb/test/test.md",
+    "htb/as/as.md",
+    "htb/caca/caca.md",
+    "htb/wifinetic/obsidian-pentesting-template.md",
+    "htb/Untitled.md",
+    "htb/wifinetic.md",
+    "htb/redpanda/RedPanda.md",
+    "htb/lame/lame.md",
+    "htb/redpanda/exploits/ippsec.jpg",
+    "Osint/UNS/screenshots/Pasted image 20240321162913.png",
+    "Osint/UNS/screenshots/Pasted image 20240321162843.png"
+  ]
+}
