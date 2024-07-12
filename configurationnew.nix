@@ -2,6 +2,7 @@
 
 {
 kitty
+tmux
 git
 wget
 python3
