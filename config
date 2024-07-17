@@ -245,7 +245,7 @@ Host kali-wstation2
         Hostname 192.168.88.64
         User nat
 Host kali-thp
-	Hostname 192.168.200.98
+	Hostname 192.168.44.88
 	User natasha
 Host surface
 	Hostname 10.0.4.125
@@ -285,4 +285,7 @@ Host promox-cdmx
 	User root
 Host debian-cdmx
 	Hostname 192.168.88.153
+	User ass
+Host kali-cdmx
+	Hostname 192.168.88.25
 	User ass
