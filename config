@@ -1,0 +1,285 @@
+Host asskali
+    #HostName 10.0.4.201
+    HostName 192.168.26.130
+    User ass
+
+
+Host asskalil
+    HostName 10.0.4.201
+    #HostName 192.168.26.130
+    User ass
+
+
+Host zero
+    HostName 10.0.4.44
+    User kali
+    Port 2244
+
+Host xps
+    HostName 192.168.88.13
+    Port 2246
+    User nat
+
+Host xps2
+    HostName 10.0.0.8
+    User nat
+    Port 2246
+
+Host torrelay
+    HostName 192.168.122.33
+    User ass
+    Port 22
+    IdentityFile ~/.ssh/id_ed25519
+    ProxyJump xpsjump,kalikemu
+
+Host ccdc
+    HostName 192.168.142.156
+    User root
+    Port 22
+    ProxyJump macpro
+
+Host ccdc2
+    HostName 100.87.248.31
+    User kali
+    Port 22
+    ProxyJump macpro
+
+
+Host macpro2
+    HostName 10.0.0.4
+    User nat 
+    Port 2246
+    IdentityFile ~/.ssh/id_ed25519
+
+Host macpro
+    HostName 192.168.88.19
+    User nat
+    Port 2246
+    IdentityFile ~/.ssh/id_ed25519
+
+Host splunk
+    HostName 100.71.75.29
+    User sysadmin
+    Port 22
+    ProxyJump kaliass
+
+Host debian
+    HostName 188.166.163.4
+    User root
+    Port 2244
+
+Host kalicell
+    HostName 10.0.4.130
+    User kali
+    IdentityFile ~/.ssh/id_ed25519
+
+Host casiton
+    HostName 192.168.22.124
+    User simba
+    Port 22
+    IdentityFile ~/.ssh/id_ed25519
+
+Host casiton2
+    HostName 10.0.0.5
+    User simba
+    Port 4423
+    IdentityFile ~/.ssh/id_ed25519
+
+Host ocean
+    HostName 161.35.147.18
+    User root
+    Port 2246
+    IdentityFile ~/.ssh/id_rsa
+
+Host ubuntu-int
+    HostName 192.168.1.140
+    User itec2890
+    Port 22
+    ProxyJump ocean
+
+
+Host purple
+    HostName 192.168.1.30
+    User natasha
+    Port 2246
+    IdentityFile ~/.ssh/id_ed25519
+
+
+Host mac15
+    HostName 10.0.4.211
+    User ass
+#    Port 2246
+    IdentityFile ~/.ssh/id_ed25519
+
+Host vmware-pro
+    HostName 10.0.4.212
+    User nat
+    Port 2246
+    IdentityFile ~/.ssh/id_ed25519
+
+Host htb
+    HostName 192.168.100.246
+    User ass
+    ProxyJump xps
+
+
+Host deb
+	Hostname 192.168.122.162
+	User ass
+	ProxyJump xps
+Host assqemu
+	Hostname 192.168.122.138
+	User ass
+	ProxyJump xps
+Host promoxmac
+	Hostname 192.168.88.8
+	User root
+	Port 2246
+
+Host kali-cjs
+	Hostname 10.0.16.17
+	User nat
+	Port 2246
+	IdentityFile ~/.ssh/id_ed25519
+
+Host archive
+	Hostname 10.0.16.12
+	User archive
+	Port 2246
+
+
+Host raspi
+	Hostname 192.168.88.22
+	User raspi
+	
+Host olas
+	Hostname 100.72.181.55
+	User olas
+	Port 2246
+	ProxyJump macpro
+Host deb-server
+	Hostname 10.0.0.10
+	User debian
+	
+Host kali-server
+	Hostname 10.0.8.14
+	User nat
+	Port 22
+Host cebolla
+	Hostname 192.168.88.200
+	User simbote
+Host kaliccdc2
+    HostName 192.168.140.110
+    User kali
+#    Port 22   
+    ProxyJump macpro
+
+Host gateway
+    HostName 192.168.140.132
+    User ass
+#    Port 22
+    ProxyJump macpro
+
+
+Host debccdc
+    HostName 192.168.140.134
+    User ass
+#    Port 22
+    ProxyJump macpro
+
+Host htb2
+	Hostname 192.168.122.224
+	User ass
+	ProxyJump kali-thp
+
+Host calor
+	Hostname 10.0.0.9
+	User nat
+
+Host raspi4
+	hostname 10.0.0.11
+	User raspi4
+
+Host transparente
+	Hostname 10.0.0.12
+	User kali
+	Port 2246
+Host macdeb
+	Hostname 192.168.88.14
+	User deb
+	
+Host nalazuh
+	Hostname 10.0.16.252
+	User nalanga
+	Port 2246
+Host kasmt
+	Hostname 10.0.0.14
+	User nalanga
+	
+Host promoxmacpro
+	Hostname 192.168.88.38
+	User root
+
+host server
+	Hostname 192.168.88.44
+	User root
+
+Host kasm-cjs
+        Hostname 10.0.16.238
+        User nalanga
+	Port 2246
+
+Host kali-wstation
+	Hostname 192.168.88.83
+	User nat
+Host kali
+	Hostname 192.168.26.131
+	User ass
+Host kasm	
+	Hostname 192.168.88.84
+	User kasm
+Host kasmmini
+	Hostname 192.168.64.8
+	User ass
+Host kali-wstation2
+        Hostname 192.168.88.64
+        User nat
+Host kali-thp
+	Hostname 192.168.200.98
+	User natasha
+Host surface
+	Hostname 10.0.4.125
+	User nala
+Host debian-tp
+	Hostname 192.168.88.176
+	User ass
+Host nixos-thp
+	Hostname 192.168.88.210
+	User nala
+Host debian-thp
+	Hostname 192.168.88.184
+	User ass
+Host kali2-mini
+	Hostname 192.168.88.68
+	User ass
+Host nixos-Macpro
+	Hostname 192.168.200.238
+	User nala
+	ProxyJump kali2-mini
+Host htb-isolate
+    HostName 192.168.80.246
+    User ass
+    ProxyJump xps
+Host kali-mini
+	Hostname 192.168.88.93
+	User ass
+Host promox-thp
+	Hostname 192.168.44.140
+	User root
+Host bodega
+	Hostname 192.168.44.187
+	User root
+
+Host promox-cdmx
+	Hostname 10.0.4.133 	
+	User root
