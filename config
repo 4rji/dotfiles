@@ -283,3 +283,6 @@ Host bodega
 Host promox-cdmx
 	Hostname 10.0.4.133 	
 	User root
+Host debian-cdmx
+	Hostname 192.168.88.153
+	User ass
