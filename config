@@ -21,7 +21,7 @@ Host xps
     User nat
 
 Host xps2
-    HostName 10.0.0.8
+    HostName 10.0.4.146
     User nat
     Port 2246
 
