@@ -270,7 +270,7 @@ Host bodega
 	User root
 
 Host promox-cdmx
-	Hostname 10.0.4.133 	
+	Hostname 192.168.88.188
 	User root
 Host debian-cdmx
 	Hostname 192.168.88.15
@@ -288,3 +288,7 @@ Host kasm-cdmx
 Host kasm-thp
         Hostname 192.168.44.251
         User panfilo
+Host promox-server
+	Hostname 192.168.88.47
+	User root
+	Port 2246
