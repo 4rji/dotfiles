@@ -17,13 +17,13 @@ Host zero
 
 Host xps
     HostName 192.168.88.13
-    Port 2246
-    User nat
+ #   Port 2246
+    User nala
 
 Host xps2
     HostName 10.0.4.146
-    User nat
-    Port 2246
+    User nala
+    Port 22
 
 Host torrelay
     HostName 192.168.122.33
@@ -44,18 +44,9 @@ Host ccdc2
     Port 22
     ProxyJump macpro
 
-
-Host macpro2
-    HostName 10.0.0.4
-    User nat 
-    Port 2246
-    IdentityFile ~/.ssh/id_ed25519
-
 Host macpro
-    HostName 192.168.88.19
-    User nat
-    Port 2246
-    IdentityFile ~/.ssh/id_ed25519
+    HostName 10.0.4.14
+    User natasha
 
 Host splunk
     HostName 100.71.75.29
@@ -118,7 +109,7 @@ Host vmware-pro
     IdentityFile ~/.ssh/id_ed25519
 
 Host htb
-    HostName 192.168.100.246
+    HostName 192.168.122.86
     User ass
     ProxyJump xps
 
@@ -162,9 +153,9 @@ Host deb-server
 	User debian
 	
 Host kali-server
-	Hostname 10.0.8.14
-	User nat
-	Port 22
+	Hostname 192.168.88.241
+	User natasha
+#	Port 22
 Host cebolla
 	Hostname 192.168.88.200
 	User simbote
@@ -235,9 +226,10 @@ Host kali-wstation
 Host kali
 	Hostname 192.168.26.131
 	User ass
-Host kasm	
-	Hostname 192.168.88.84
-	User kasm
+Host kasm-xps
+	Hostname  192.168.122.234
+	User ass
+        ProxyJump xps
 Host kasmmini
 	Hostname 192.168.64.8
 	User ass
@@ -245,17 +237,14 @@ Host kali-wstation2
         Hostname 192.168.88.64
         User nat
 Host kali-thp
-	Hostname 192.168.44.88
-	User natasha
+	Hostname 192.168.44.170
+	User panfilo
 Host surface
 	Hostname 10.0.4.125
 	User nala
 Host debian-tp
 	Hostname 192.168.88.176
 	User ass
-Host nixos-thp
-	Hostname 192.168.88.210
-	User nala
 Host debian-thp
 	Hostname 192.168.88.184
 	User ass
@@ -284,8 +273,18 @@ Host promox-cdmx
 	Hostname 10.0.4.133 	
 	User root
 Host debian-cdmx
-	Hostname 192.168.88.153
-	User ass
+	Hostname 192.168.88.15
+	User mazapana
 Host kali-cdmx
-	Hostname 192.168.88.25
-	User ass
+	Hostname 192.168.88.212
+	User mazapana
+Host kali-thp2
+	Hostname 192.168.44.196
+	User natasha
+
+Host kasm-cdmx
+	Hostname 192.168.88.15
+	User mazapana
+Host kasm-thp
+        Hostname 192.168.44.251
+        User panfilo
