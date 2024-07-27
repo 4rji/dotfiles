@@ -174,9 +174,15 @@ proxy
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color. icono
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=255
-
+#iconos
  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
-# typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='  󰣇 󰡨'
+# typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
+# typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
+# typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
+# typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='󰣇'
+# typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='󰡨'
+
+
 
 # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
 # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='  󰣇 󰡨'
@@ -184,7 +190,7 @@ proxy
   # Custom icon.
 
   ################################[ prompt_char: prompt symbol ]################################
- typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
+ #typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
 # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='  󰣇 󰡨'
   # Transparent background.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_BACKGROUND=
