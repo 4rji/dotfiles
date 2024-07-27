@@ -1,29 +1,24 @@
 Host xps
     HostName 192.168.88.13
- #   Port 2246
     User nala
 
 Host xps2
     HostName 10.0.4.146
     User nala
-    Port 22
 
 Host ccdc
     HostName 192.168.142.156
     User root
-    Port 22
     ProxyJump macpro
 
 Host ccdc2
     HostName 100.87.248.31
     User kali
-    Port 22
     ProxyJump macpro
 
 Host kalicell
     HostName 10.0.4.130
     User kali
-    IdentityFile ~/.ssh/id_ed25519
 
 Host casiton
     HostName 192.168.22.124
@@ -49,7 +44,6 @@ Host archive
 	User archive
 	Port 2246
 
-
 Host raspi
 	Hostname 192.168.88.22
 	User raspi
@@ -66,14 +60,10 @@ Host deb-server
 Host kali-server
 	Hostname 192.168.88.241
 	User natasha
-#	Port 22
-Host cebolla
-	Hostname 192.168.88.200
-	User simbote
+
 Host kaliccdc2
     HostName 192.168.140.110
     User kali
-#    Port 22   
     ProxyJump macpro
 
 Host gateway
@@ -83,46 +73,10 @@ Host gateway
     ProxyJump macpro
 
 
-Host debccdc
-    HostName 192.168.140.134
-    User ass
-#    Port 22
-    ProxyJump macpro
-
-Host htb2
-	Hostname 192.168.122.224
-	User ass
-	ProxyJump kali-thp
-
-Host calor
-	Hostname 10.0.0.9
-	User nat
-
-Host raspi4
-	hostname 10.0.0.11
-	User raspi4
-
 Host transparente
 	Hostname 10.0.0.12
 	User kali
 	Port 2246
-Host macdeb
-	Hostname 192.168.88.14
-	User deb
-	
-Host nalazuh
-	Hostname 10.0.16.252
-	User nalanga
-	Port 2246
-	
-Host promoxmacpro
-	Hostname 192.168.88.38
-	User root
-
-host server
-	Hostname 192.168.88.44
-	User root
-
 
 Host kali-thp
 	Hostname 192.168.44.170
@@ -130,13 +84,6 @@ Host kali-thp
 Host debian-thp
 	Hostname 192.168.44.199
 	User panfilo
-Host kali2-mini
-	Hostname 192.168.88.68
-	User ass
-Host nixos-Macpro
-	Hostname 192.168.200.238
-	User nala
-	ProxyJump kali2-mini
 
 Host htb-isolate
     HostName 192.168.80.246
