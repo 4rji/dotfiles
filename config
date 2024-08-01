@@ -127,3 +127,7 @@ Host kali-xps
 Host kasm-server
         Hostname 192.168.88.167
         User panfilo
+Host ocean
+	Hostname 137.184.126.238
+	User root
+	Port 2244
