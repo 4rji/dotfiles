@@ -3,7 +3,7 @@ Host xps
     User nala
 
 Host xps2
-    HostName 10.0.4.146
+    HostName 10.0.4.31
     User nala
 
 Host ccdc
@@ -82,7 +82,7 @@ Host kali-thp
 	Hostname 192.168.44.170
 	User panfilo
 Host debian-thp
-	Hostname 192.168.44.199
+	Hostname 192.168.44.215
 	User panfilo
 
 Host htb-isolate
