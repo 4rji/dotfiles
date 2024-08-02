@@ -85,14 +85,18 @@ Host debian-thp
 	Hostname 192.168.44.215
 	User panfilo
 
-Host htb-isolate
-    HostName 192.168.80.246
+Host htb
+    HostName 192.168.122.211
     User ass
     ProxyJump xps
 
 Host kali-mini
 	Hostname 192.168.88.93
 	User ass
+
+Host promox-cjs
+	Hostname 10.0.16.20
+	User root
 Host promox-thp
 	Hostname 192.168.44.140
 	User root
