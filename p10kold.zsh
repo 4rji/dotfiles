@@ -63,7 +63,6 @@ function prompt_hola() {
 hola
 os_icon
     dir                     # current directory
-ip
 #    vcs                     # git status
 #public_ip
 proxy
@@ -1601,7 +1600,11 @@ proxy
   #   P9K_IP_TX_BYTES_DELTA | number of bytes sent since last prompt
   #   P9K_IP_RX_RATE        | receive rate (since last prompt)
   #   P9K_IP_TX_RATE        | send rate (since last prompt)
-#  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='${P9K_IP_RX_RATE:+%70F⇣$P9K_IP_RX_RATE }${P9K_IP_TX_RATE:+%215F⇡$P9K_IP_TX_RATE }%38F$P9K_IP_IP'
+  
+  #IP con bandwind
+  #typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='${P9K_IP_RX_RATE:+%70F⇣$P9K_IP_RX_RATE }${P9K_IP_TX_RATE:+%215F⇡$P9K_IP_TX_RATE }%38F$P9K_IP_IP'
+  #sin bandwin
+  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%38F$P9K_IP_IP'
   typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%38F$P9K_IP_IP'
 
   # Show information for the first network interface whose name matches this regular expression.
