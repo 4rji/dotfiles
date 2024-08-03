@@ -1,0 +1,26 @@
+wfuzz -c --hc=404,302 --hw=1596 -t  200 -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt "https://bizness.htb/control/FUZZ"
+
+ /usr/lib/python3/dist-packages/wfuzz/__init__.py:34: UserWarning:Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz's documentation for more information.
+********************************************************
+* Wfuzz 3.1.0 - The Web Fuzzer                         *
+********************************************************
+
+Target: https://bizness.htb/control/FUZZ
+Total requests: 220560
+
+=====================================================================
+ID           Response   Lines    Word       Chars       Payload                                                                                                                            
+=====================================================================
+
+000000077:   200        140 L    496 W      9308 Ch     "main"                                                                                                                             
+000000138:   200        140 L    496 W      9308 Ch     "view"                                                                                                                             
+000000061:   200        179 L    580 W      10756 Ch    "help"                                                                                                                             
+000000053:   200        185 L    598 W      11060 Ch    "login"                                                                                                                            
+000001225:   200        179 L    580 W      10756 Ch    "logout"                                                                                                                           
+000003032:   200        140 L    496 W      9308 Ch     "views"                                                                                                                            
+ /usr/lib/python3/dist-packages/wfuzz/wfuzz.py:80: UserWarning:Finishing pending requests...
+^C
+Total time: 0
+Processed Requests: 3415
+Filtered Requests: 3409
+Requests/sec.: 0
