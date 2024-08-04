@@ -3,7 +3,7 @@ Host xps
     User nala
 
 Host xps2
-    HostName 10.0.4.31
+    HostName 10.0.4.49
     User nala
 
 Host ccdc
