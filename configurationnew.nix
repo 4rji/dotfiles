@@ -1,31 +1,42 @@
 { config, pkgs, ... }:
 
 {
+figlet
+lolcat
+
+joplin
 kitty
 tmux
+fzf
 git
 wget
 python3
+protonvpn-gui
 #ifupdown
 bat
 lsd
 tldr
+kde-gtk-config
 sublime
 iproute2
 moreutils
+google-chrome
 pipx
 distrobox
 opera
 brave
+lazygit
 gparted
 xclip
 jq
 procps
 #net-tools - not available
+yazi
 lsof
 python312Packages.pip
 dig
 barrier
+
 
 findutils
 magic-wormhole
@@ -39,6 +50,7 @@ gh
 nmap
 #sxhkd
 tree
+zsh
 
 
 
