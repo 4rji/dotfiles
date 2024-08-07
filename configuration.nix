@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+
+
+##start here
+
+
 figlet
 lolcat
 
@@ -8,9 +13,13 @@ joplin
 kitty
 tmux
 fzf
+github-desktop
 git
 wget
+
 python3
+wireguard-tools
+fail2ban
 protonvpn-gui
 #ifupdown
 bat
@@ -29,6 +38,7 @@ lazygit
 gparted
 xclip
 jq
+
 procps
 #net-tools - not available
 yazi
@@ -36,7 +46,6 @@ lsof
 python312Packages.pip
 dig
 barrier
-
 
 findutils
 magic-wormhole
@@ -51,7 +60,6 @@ nmap
 #sxhkd
 tree
 zsh
-
 
 
 
