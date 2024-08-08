@@ -52,9 +52,8 @@ Host deb-server
 	User debian
 	
 Host kali-server
-	Hostname 192.168.88.241
-	User natasha
-
+	Hostname 192.168.88.181
+	User nala 
 Host kaliccdc2
     HostName 192.168.140.110
     User kali
