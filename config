@@ -54,6 +54,7 @@ Host deb-server
 Host kali-server
 	Hostname 192.168.88.181
 	User nala 
+	Identityfile /Users/javito/.ssh/id_ed25519_new
 Host kaliccdc2
     HostName 192.168.140.110
     User kali
@@ -74,6 +75,7 @@ Host transparente
 Host kali-thp
 	Hostname 192.168.44.195
 	User natasha
+	Identityfile /Users/javito/.ssh/id_ed25519_new
 Host debian-thp
 	Hostname 192.168.44.215
 	User panfilo
