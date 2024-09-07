@@ -106,8 +106,9 @@ Host debian-cdmx
 	Hostname 192.168.88.40
 	User mazapana
 Host kali-cdmx
-	Hostname 192.168.88.233
+	Hostname 192.168.99.174
 	User mazapana
+	Identityfile /Users/javito/.ssh/id_ed25519_new
 Host kali-thp2
 	Hostname 192.168.44.196
 	User natasha
@@ -137,3 +138,8 @@ Host kali-cjs
 Host htb2
 	Hostname 192.168.44.181
 	User panfilo
+
+Host blink
+        Hostname 192.168.66.38
+        User panfilo
+        Identityfile /Users/javito/.ssh/id_ed25519_new
