@@ -72,10 +72,11 @@ Host transparente
 	User kali
 	Port 2246
 
-Host kali-thp
+Host kali-thpold
 	Hostname 192.168.44.195
 	User natasha
-#	Identityfile /Users/javito/.ssh/id_ed25519_new
+	Identityfile /Users/javito/.ssh/id_ed25519
+
 Host debian-thp
 	Hostname 192.168.44.215
 	User panfilo
@@ -114,7 +115,7 @@ Host kali-thp2
 	User natasha
 
 Host kasm-thp
-        Hostname 192.168.44.251
+        Hostname 192.168.18.116
         User panfilo
 Host promox-server
 	Hostname 192.168.88.47
@@ -143,4 +144,16 @@ Host blink
         Hostname 192.168.66.38
         User panfilo
 	Port 2246
-#        Identityfile /Users/javito/.ssh/id_ed25519_new
+#        Identityfile /Users/javito/.ssh/id_ed25519
+Host surfito
+	Hostname 10.0.4.32
+	User nala
+        Identityfile /Users/javito/.ssh/id_ed25519
+Host	kali-changa
+	Hostname 192.168.88.75
+	User changa
+	Identityfile /Users/javito/.ssh/id_ed25519
+Host kali-thp
+        Hostname 192.168.44.140
+        User panfilo
+        Identityfile /Users/javito/.ssh/id_ed25519
