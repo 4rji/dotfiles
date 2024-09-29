@@ -157,3 +157,8 @@ Host kali-thp
         Hostname 192.168.44.140
         User panfilo
         Identityfile /Users/javito/.ssh/id_ed25519
+
+Host escuela
+	Hostname 192.168.142.156
+	User kali
+	
