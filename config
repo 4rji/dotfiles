@@ -162,3 +162,6 @@ Host escuela
 	Hostname 192.168.142.156
 	User kali
 	
+Host dockerlabs
+	Hostname 192.168.3.5
+	User havi
