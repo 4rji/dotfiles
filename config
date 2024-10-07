@@ -162,6 +162,12 @@ Host escuela
 	Hostname 192.168.142.156
 	User kali
 	
-Host dockerlabs
-	Hostname 192.168.3.5
+Host lab
+	Hostname 192.168.3.7
 	User havi
+	Identityfile /Users/javito/.ssh/id_ed25519
+
+Host lab-debian
+        Hostname 192.168.3.5
+        User havi   
+        Identityfile /Users/javito/.ssh/id_ed25519
