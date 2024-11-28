@@ -1,10 +1,6 @@
 Host xps
-    HostName 192.168.88.13
-    User nala
-
-Host xps2
-    HostName 10.0.4.49
-    User nala
+    HostName 10.0.4.219
+    User havi
 
 Host ccdc
     HostName 192.168.142.156
@@ -54,7 +50,7 @@ Host deb-server
 Host kali-server
 	Hostname 192.168.88.181
 	User nala 
-#	Identityfile /Users/javito/.ssh/id_ed25519
+#	Identityfile /Users/javijay/.ssh/id_ed25519
 Host kaliccdc2
     HostName 192.168.140.110
     User kali
@@ -75,7 +71,7 @@ Host transparente
 Host kali-thpold
 	Hostname 192.168.44.195
 	User natasha
-	Identityfile /Users/javito/.ssh/id_ed25519
+	Identityfile /Users/javijay/.ssh/id_ed25519
 
 Host debian-thp
 	Hostname 192.168.44.215
@@ -109,9 +105,9 @@ Host debian-cdmx
 Host kali-cdmx
 	Hostname 192.168.99.174
 	User mazapana
-#	Identityfile /Users/javito/.ssh/id_ed25519_new
+#	Identityfile /Users/javijay/.ssh/id_ed25519_new
 Host kali-thp2
-	Hostname 192.168.44.196
+	Hostname 192.168.44.195
 	User natasha
 
 Host kasm-thp
@@ -144,19 +140,21 @@ Host blink
         Hostname 192.168.66.38
         User panfilo
 	Port 2246
-#        Identityfile /Users/javito/.ssh/id_ed25519
+#        Identityfile /Users/javijay/.ssh/id_ed25519
 Host surfito
 	Hostname 10.0.4.32
 	User nala
-        Identityfile /Users/javito/.ssh/id_ed25519
-Host	kali-changa
+        Identityfile /Users/javijay/.ssh/id_ed25519
+
+Host	changa
 	Hostname 192.168.88.75
 	User changa
-	Identityfile /Users/javito/.ssh/id_ed25519
+	Identityfile /Users/javijay/.ssh/id_ed25519
+
 Host kali-thp
-        Hostname 192.168.44.140
+        Hostname 192.168.44.141
         User panfilo
-        Identityfile /Users/javito/.ssh/id_ed25519
+        Identityfile /Users/javijay/.ssh/id_ed25519
 
 Host escuela
 	Hostname 192.168.142.156
@@ -165,9 +163,12 @@ Host escuela
 Host lab
 	Hostname 192.168.3.7
 	User havi
-	Identityfile /Users/javito/.ssh/id_ed25519
+	Identityfile /Users/javijay/.ssh/id_ed25519
 
 Host lab-debian
         Hostname 192.168.3.5
         User havi   
-        Identityfile /Users/javito/.ssh/id_ed25519
+        Identityfile /Users/javijay/.ssh/id_ed25519
+Host havired
+	Hostname 192.168.44.86
+	User havi

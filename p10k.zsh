@@ -60,7 +60,7 @@ function prompt_hola() {
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
-#hola
+hola
 os_icon
     dir                     # current directory
 ip
@@ -176,7 +176,7 @@ ip
   # OS identifier color. icono
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=255
 #iconos
- typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
+ #typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
 # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
 # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
 # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
