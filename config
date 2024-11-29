@@ -71,7 +71,7 @@ Host transparente
 Host kali-thpold
 	Hostname 192.168.44.195
 	User natasha
-	Identityfile /Users/javijay/.ssh/id_ed25519
+    IdentityFile ~/.ssh/id_ed25519
 
 Host debian-thp
 	Hostname 192.168.44.215
@@ -144,17 +144,17 @@ Host blink
 Host surfito
 	Hostname 10.0.4.32
 	User nala
-        Identityfile /Users/javijay/.ssh/id_ed25519
+            IdentityFile ~/.ssh/id_ed25519
 
 Host	changa
 	Hostname 192.168.88.75
 	User changa
-	Identityfile /Users/javijay/.ssh/id_ed25519
+	    IdentityFile ~/.ssh/id_ed25519
 
 Host kali-thp
         Hostname 192.168.44.141
         User panfilo
-        Identityfile /Users/javijay/.ssh/id_ed25519
+            IdentityFile ~/.ssh/id_ed25519
 
 Host escuela
 	Hostname 192.168.142.156
@@ -163,12 +163,13 @@ Host escuela
 Host lab
 	Hostname 192.168.3.7
 	User havi
-	Identityfile /Users/javijay/.ssh/id_ed25519
+    IdentityFile ~/.ssh/id_ed25519
 
+    
 Host lab-debian
         Hostname 192.168.3.5
         User havi   
-        Identityfile /Users/javijay/.ssh/id_ed25519
+        IdentityFile ~/.ssh/id_ed25519
 Host havired
 	Hostname 192.168.44.86
 	User havi
