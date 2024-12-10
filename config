@@ -19,79 +19,28 @@ Host kalicell
 Host casiton
     HostName 192.168.22.124
     User simba
-    Port 22
-    IdentityFile ~/.ssh/id_ed25519
 
-Host casiton2
-    HostName 10.0.0.5
-    User simba
-    Port 4423
-    IdentityFile ~/.ssh/id_ed25519
-
-
-Host archive
-	Hostname 10.0.16.12
-	User archive
-	Port 2246
-
-Host raspi
-	Hostname 192.168.88.22
-	User raspi
-	
-Host olas
-	Hostname 100.72.181.55
-	User olas
-	Port 2246
-	ProxyJump macpro
-Host deb-server
-	Hostname 10.0.0.10
-	User debian
-	
 Host kali-server
 	Hostname 192.168.88.181
 	User nala 
-#	Identityfile /Users/javijay/.ssh/id_ed25519
-Host kaliccdc2
-    HostName 192.168.140.110
-    User kali
-    ProxyJump macpro
-
-Host gateway
-    HostName 192.168.140.132
-    User ass
-#    Port 22
-    ProxyJump macpro
-
 
 Host transparente
 	Hostname 10.0.0.12
 	User kali
 	Port 2246
-
-Host kali-thpold
-	Hostname 192.168.44.195
-	User natasha
-    IdentityFile ~/.ssh/id_ed25519
-
+ 
 Host debian-thp
 	Hostname 192.168.44.215
 	User panfilo
 
-Host htb
-    HostName 192.168.122.211
-    User ass
-    ProxyJump xps
-
-Host kali-mini
-	Hostname 192.168.88.93
-	User ass
-
 Host promox-cjs
 	Hostname 10.0.16.20
 	User root
+
 Host promox-thp
 	Hostname 192.168.44.140
 	User root
+
 Host bodega
 	Hostname 192.168.44.187
 	User root
@@ -99,13 +48,15 @@ Host bodega
 Host promox-cdmx
 	Hostname 192.168.88.188
 	User root
+
 Host debian-cdmx
 	Hostname 192.168.88.40
 	User mazapana
+
 Host kali-cdmx
 	Hostname 192.168.99.174
 	User mazapana
-#	Identityfile /Users/javijay/.ssh/id_ed25519_new
+
 Host kali-thp2
 	Hostname 192.168.44.195
 	User natasha
@@ -113,63 +64,33 @@ Host kali-thp2
 Host kasm-thp
         Hostname 192.168.18.116
         User panfilo
+
 Host promox-server
 	Hostname 192.168.88.47
 	User root
 	Port 2246
-Host kali-xps
-	Hostname 192.168.88.13
-	User nala
 
-Host kasm-server
-        Hostname 192.168.88.167
-        User panfilo
-Host ocean
-	Hostname 137.184.126.238
-	User root
-	Port 2244
 Host kali-cjs
 	Hostname 10.0.16.189
 	User pepe
-	
-Host htb2
-	Hostname 192.168.44.181
-	User panfilo
 
-Host blink
-        Hostname 192.168.66.38
-        User panfilo
-	Port 2246
-#        Identityfile /Users/javijay/.ssh/id_ed25519
 Host surfito
-	Hostname 10.0.4.32
+	Hostname 10.0.4.83
 	User nala
-            IdentityFile ~/.ssh/id_ed25519
 
 Host	changa
 	Hostname 192.168.88.75
 	User changa
-	    IdentityFile ~/.ssh/id_ed25519
 
 Host kali-thp
         Hostname 192.168.44.141
         User panfilo
-            IdentityFile ~/.ssh/id_ed25519
-
-Host escuela
-	Hostname 192.168.142.156
-	User kali
 	
 Host lab
 	Hostname 192.168.3.7
 	User havi
-    IdentityFile ~/.ssh/id_ed25519
-
-    
+ 
 Host lab-debian
         Hostname 192.168.3.5
         User havi   
-        IdentityFile ~/.ssh/id_ed25519
-Host havired
-	Hostname 192.168.44.86
-	User havi
+        
