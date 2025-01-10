@@ -1,6 +1,9 @@
+Host popos
+	HostName 192.168.44.229
+	User ass
 Host xps
     HostName 10.0.4.219
-    User havi
+    User natasha
 
 Host ccdc
     HostName 192.168.142.156
@@ -30,8 +33,8 @@ Host transparente
 	Port 2246
  
 Host debian-thp
-	Hostname 192.168.44.215
-	User panfilo
+	Hostname 192.168.44.222
+	User ass
 
 Host promox-cjs
 	Hostname 10.0.16.20
@@ -83,7 +86,7 @@ Host	changa
 	User changa
 
 Host kali-thp
-        Hostname 192.168.44.141
+        Hostname 192.168.44.10
         User panfilo
 	
 Host lab
@@ -93,4 +96,6 @@ Host lab
 Host lab-debian
         Hostname 192.168.3.5
         User havi   
-        
+Host lorox
+	Hostname 192.168.44.124        
+	User panfilo
