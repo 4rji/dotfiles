@@ -6,14 +6,9 @@ Host xps
     User natasha
 
 Host ccdc
-    HostName 192.168.142.156
-    User root
-    ProxyJump macpro
+    HostName 192.168.3.2
+    User ass
 
-Host ccdc2
-    HostName 100.87.248.31
-    User kali
-    ProxyJump macpro
 
 Host kalicell
     HostName 10.0.4.130
