@@ -4,6 +4,7 @@ Host popos
 Host xps
     HostName 10.0.4.219
     User natasha
+    Port 2222
 
 Host ccdc
     HostName 192.168.3.2
@@ -52,12 +53,9 @@ Host debian-cdmx
 	User mazapana
 
 Host kali-thp2
-	Hostname 192.168.44.195
-	User natasha
+	Hostname 192.168.44.10
+	User panfilo
 
-Host kasm-thp
-        Hostname 192.168.18.116
-        User panfilo
 
 Host promox-server
 	Hostname 192.168.88.47
