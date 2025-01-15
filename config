@@ -1,3 +1,6 @@
+Host ocean
+	Hostname 143.198.55.78
+	User ass
 Host popos
 	HostName 192.168.44.229
 	User ass
@@ -75,7 +78,7 @@ Host	changa
 	User changa
 
 Host kali-thp
-        Hostname 192.168.44.10
+        Hostname 192.168.44.102
         User panfilo
 	
 Host lab
