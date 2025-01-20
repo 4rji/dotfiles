@@ -16,7 +16,7 @@ Host xps
 Host ccdc
     HostName 192.168.3.2
     User ass
-
+    Port 2244
 
 Host kalicell
     HostName 10.0.4.130
@@ -101,3 +101,12 @@ Host popos-server
 Host kali-cdmx
 	Hostname 192.168.99.14
 	User mazapana
+Host palo-tinto
+	Hostname 10.0.4.45
+	User ass
+Host d-internal
+	Hostname 192.168.3.10
+	User ass
+Host server
+	Hostname 10.0.4.46
+	User root
