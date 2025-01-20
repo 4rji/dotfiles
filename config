@@ -1,6 +1,10 @@
+Host debian-palo
+	Hostname 10.0.4.45
+	User ass
 Host ocean
 	Hostname 143.198.55.78
 	User ass
+	Port 2333
 Host popos
 	HostName 192.168.44.229
 	User ass
