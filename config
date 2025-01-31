@@ -72,9 +72,6 @@ Host promox-server
 	User root
 	Port 2246
 
-Host kali-cjs
-	Hostname 10.0.16.189
-	User pepe
 
 Host surfito
 	Hostname 10.0.4.83
@@ -113,3 +110,9 @@ Host d-internal
 Host server
 	Hostname 10.0.4.46
 	User root
+Host debian-cjs
+	Hostname 10.0.16.60
+	User ass
+Host kali-cjs
+	Hostname 10.0.16.154
+	User natasha
