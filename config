@@ -47,7 +47,7 @@ Host promox-cjs
 	User root
 
 Host promox-thp
-	Hostname 192.168.44.140
+	Hostname 192.168.44.141
 	User root
 
 Host bodega
@@ -55,7 +55,7 @@ Host bodega
 	User root
 
 Host promox-cdmx
-	Hostname 192.168.88.188
+	Hostname 192.168.99.99
 	User root
 
 Host debian-cdmx
