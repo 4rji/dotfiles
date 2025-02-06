@@ -68,16 +68,16 @@ Host kali-thp2
 
 
 Host promox-server
-	Hostname 192.168.88.47
+	Hostname 10.0.4.46
 	User root
-	Port 2246
+#	Port 2246
 
 
 Host surfito
 	Hostname 10.0.4.83
 	User nala
 
-Host	changa
+Host	kali-changa
 	Hostname 192.168.88.75
 	User changa
 
@@ -107,12 +107,16 @@ Host palo-tinto
 Host d-internal
 	Hostname 192.168.3.10
 	User ass
-Host server
-	Hostname 10.0.4.46
-	User root
+
 Host debian-cjs
 	Hostname 10.0.16.60
 	User ass
 Host kali-cjs
 	Hostname 10.0.16.154
 	User natasha
+Host promox-changa
+	Hostname 192.168.88.171
+	User root
+Host kasm-changa
+	Hostname 192.168.88.89
+	User ass
