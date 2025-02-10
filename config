@@ -120,3 +120,6 @@ Host promox-changa
 Host kasm-changa
 	Hostname 192.168.88.89
 	User ass
+Host redhat-thp
+	Hostname 192.168.44.101
+	User nala
