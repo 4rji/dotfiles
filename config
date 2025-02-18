@@ -135,7 +135,7 @@ Host raspi4
 	Hostname 10.0.4.37
 	User natasha
 	
-Host arch
+Host arch1
 	Hostname 10.0.4.175
 	User 4rji
 Host arch-thp
