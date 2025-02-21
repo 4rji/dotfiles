@@ -134,3 +134,10 @@ Host arch1
 Host arch-thp
 	Hostname 192.168.44.77
 	User nala
+Host debian1
+	Hostname 64.23.189.196
+	User nala
+	Port 2246
+Host debian2
+	Hostname 64.23.183.250
+	User root
