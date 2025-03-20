@@ -1,9 +1,7 @@
-Host debian-palo
-	Hostname 10.0.4.45
-	User ass
 Host popos
-	HostName 192.168.44.229
-	User ass
+	HostName 192.168.44.34
+	User nala
+
 Host xps
     HostName 10.0.4.219
     User natasha
@@ -23,21 +21,13 @@ Host kalicell
     HostName 10.0.4.130
     User kali
 
-Host casiton
-    HostName 192.168.22.124
-    User simba
-
-Host kali-server
-	Hostname 192.168.88.181
-	User nala 
-
 Host transparente
 	Hostname 10.0.0.12
 	User kali
 	Port 2246
  
 Host debian-thp
-	Hostname 192.168.44.222
+	Hostname 192.168.44.97
 	User ass
 
 Host promox-cjs
@@ -60,15 +50,9 @@ Host debian-cdmx
 	Hostname 192.168.99.35
 	User mazapana
 
-Host kali-thp2
-	Hostname 192.168.44.10
+Host kali-thp
+	Hostname 192.168.55.
 	User panfilo
-
-
-Host promox-server
-	Hostname 10.0.4.46
-	User root
-#	Port 2246
 
 
 Host surfito
@@ -90,54 +74,39 @@ Host lab
 Host lab-debian
         Hostname 192.168.3.5
         User havi   
+
 Host lorox
 	Hostname 192.168.44.124        
 	User panfilo
-Host popos-server
-	hostname 10.0.4.235
-	User ass
+
 Host kali-cdmx
 	Hostname 192.168.99.14
 	User mazapana
-Host palo-tinto
-	Hostname 10.0.4.45
-	User ass
-Host d-internal
-	Hostname 192.168.3.10
-	User ass
 
 Host debian-cjs
 	Hostname 10.0.16.60
 	User ass
+
 Host kali-cjs
 	Hostname 10.0.16.154
 	User natasha
+
 Host promox-changa
 	Hostname 192.168.88.171
 	User root
+
 Host kasm-changa
 	Hostname 192.168.88.89
 	User ass
-Host redhat-thp
-	Hostname 192.168.44.101
-	User nala
-Host debian-gui-thp
-	Hostname 192.168.44.152
-	User nala
+
 Host raspi4
 	Hostname 10.0.4.37
 	User natasha
 	
-Host arch1
+Host arch
 	Hostname 10.0.4.175
 	User 4rji
-Host arch-thp
-	Hostname 192.168.44.77
-	User nala
-Host debian1
-	Hostname 64.23.189.196
-	User nala
-	Port 2246
-Host debian2
-	Hostname 64.23.183.250
-	User root
+
+Host kasm-cjs
+	Hostname 10.0.16.162
+	User ass
