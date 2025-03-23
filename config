@@ -35,7 +35,7 @@ Host promox-cjs
 	User root
 
 Host promox-thp
-	Hostname 192.168.44.141
+	Hostname 192.168.44.44
 	User root
 
 Host bodega
@@ -51,8 +51,8 @@ Host debian-cdmx
 	User mazapana
 
 Host kali-thp
-	Hostname 192.168.55.
-	User panfilo
+	Hostname 192.168.44.91
+	User ass
 
 
 Host surfito
@@ -63,10 +63,6 @@ Host	kali-changa
 	Hostname 192.168.88.75
 	User changa
 
-Host kali-thp
-        Hostname 192.168.44.102
-        User panfilo
-	
 Host lab
 	Hostname 192.168.3.7
 	User havi
@@ -109,4 +105,29 @@ Host arch
 
 Host kasm-cjs
 	Hostname 10.0.16.162
+	User ass
+
+Host debian-server
+	Hostname 10.0.4.70
+	User ass
+
+Host proxmox-server
+	Hostname 10.0.4.44
+	User root
+
+Host proxmox-mega
+	Hostname 192.168.55.55
+	User root
+
+Host debian-55
+	Hostname 192.168.55.143
+	User ass
+
+Host debian-mega
+	Hostname 192.168.55.138
+	User ass
+
+
+Host kali-mega
+	hostname 192.168.55.77
 	User ass
