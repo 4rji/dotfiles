@@ -95,10 +95,6 @@ Host kasm-changa
 	Hostname 192.168.88.89
 	User ass
 
-Host raspi4
-	Hostname 10.0.4.37
-	User natasha
-	
 Host arch
 	Hostname 10.0.4.175
 	User 4rji
@@ -131,3 +127,14 @@ Host debian-mega
 Host kali-mega
 	hostname 192.168.55.77
 	User ass
+Host coolify-server
+	Hostname 10.0.4.133
+	User ass
+Host kali-M4
+	Hostname 10.0.4.179
+	User natasha
+
+
+Host debian-M4
+	Hostname 10.0.4.12
+	User nala
