@@ -138,9 +138,20 @@ Host coolify-server
 Host kali-M4
 	Hostname 10.0.4.179
 	User natasha
-
+Host debian-thp-gui
+	Hostname 192.168.44.97
+	User ass
 
 Host debian-M4
 	Hostname 10.0.4.10
 	User nala
 
+Host debian-changa
+	Hostname 192.168.88.81
+	User ass
+Host kasm-thp
+	Hostname 192.168.44.6
+	User ass
+Host coolify-thp
+	Hostname 192.168.44.208
+	User nala
