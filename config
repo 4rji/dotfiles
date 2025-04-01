@@ -17,6 +17,11 @@ Host ccdc
     User ass
     Port 2244
 
+ Host ccdc-ass
+     Hostname 192.168.142.17
+     User ass
+     ProxyJump ccdc
+
 Host kalicell
     HostName 10.0.4.130
     User kali
@@ -138,3 +143,4 @@ Host kali-M4
 Host debian-M4
 	Hostname 10.0.4.10
 	User nala
+
