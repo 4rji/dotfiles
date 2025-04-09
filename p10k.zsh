@@ -1717,6 +1717,8 @@ ip
 
   ###########[ ip: ip address and bandwidth usage for a specified network interface ]###########
   # IP color.
+  
+
   typeset -g POWERLEVEL9K_IP_BACKGROUND=202
   typeset -g POWERLEVEL9K_IP_FOREGROUND=172
   # The following parameters are accessible within the expansion:
