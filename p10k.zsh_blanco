@@ -115,24 +115,6 @@ ip
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
-
-
-
-
-
-
-typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
-typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=''
-typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
-
-
-
-
-
-
-
-
-
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_BACKGROUND=
@@ -1552,6 +1534,39 @@ typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
   #   typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_CLASSES=(
   #     '*:*prod*:*'  PROD
   #     '*:*test*:*'  TEST
+  #     '*'           DEFAULT)
+  #
+  # If your current Google application credentials is "service_account deathray-testing x@y.com",
+  # its class is TEST because it doesn't match the pattern '* *prod* *' but does match '* *test* *'.
+  #
+  # You can define different colors, icons and content expansions for different classes:
+  #
+  #   typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_TEST_FOREGROUND=28
+  #   typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_TEST_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  #   typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_TEST_CONTENT_EXPANSION='$P9K_GOOGLE_APP_CRED_PROJECT_ID'
+  typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_CLASSES=(
+      # '*:*prod*:*'  PROD    # These values are examples that are unlikely
+      # '*:*test*:*'  TEST    # to match your needs. Customize them as needed.
+      '*'             DEFAULT)
+  typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_DEFAULT_FOREGROUND=7
+  typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_DEFAULT_BACKGROUND=4
+  # typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_DEFAULT_VISUAL_IDENTIFIER_EXPANSION='⭐'
+
+  # Use POWERLEVEL9K_GOOGLE_APP_CRED_CONTENT_EXPANSION to specify the content displayed by
+  # google_app_cred segment. Parameter expansions are very flexible and fast, too. See reference:
+  # http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion.
+  #
+  # You can use the following parameters in the expansion. Each of them corresponds to one of the
+  # fields in the JSON file pointed to by GOOGLE_APPLICATION_CREDENTIALS.
+  #
+  #   Parameter                        | JSON key file field
+  #   ---------------------------------+---------------
+  #   P9K_GOOGLE_APP_CRED_TYPE         | type
+  #   P9K_GOOGLE_APP_CRED_PROJECT_ID   | project_id
+  #   P9K_GOOGLE_APP_CRED_CLIENT_EMAIL | client_email
+  #
+  # Note: ${VARIABLE//\%/%%} expands to ${VARIABLE} with all occurrences of '%' replaced by '%%'.
+  typeset -g POWERLEVEL9K_GOOGLE_APP_CRED_DEFAULT_CONTENT_EXPANSION='${P9K_GOOGLE_APP_CRED_PROJECT_ID//\%/%%}'
 
   ##############[ toolbox: toolbox name (https://github.com/containers/toolbox) ]###############
   # Toolbox color.
@@ -1564,38 +1579,12 @@ typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
   # Custom prefix.
   typeset -g POWERLEVEL9K_TOOLBOX_PREFIX='in '
 
-
-
-
-
-
   ###############################[ public_ip: public IP address ]###############################
-#IP HERE
-
-typeset -g POWERLEVEL9K_IP_SHOW_VISUAL_IDENTIFIER=false
-typeset -g POWERLEVEL9K_IP_VISUAL_IDENTIFIER_EXPANSION=
-
-
-unset POWERLEVEL9K_IP_INTERFACE
-typeset -g POWERLEVEL9K_IP_INTERFACE=''
-
-
-#typeset -g POWERLEVEL9K_IP_BACKGROUND=black
-typeset -g POWERLEVEL9K_IP_BACKGROUND=color0
-typeset -g POWERLEVEL9K_IP_FOREGROUND=white
-typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%B%F{white}$P9K_IP_IP%f%b'
-
-
-
-
-
-
-
-
-
-
-
-
+  # Public IP color.
+  typeset -g POWERLEVEL9K_PUBLIC_IP_FOREGROUND=232
+  typeset -g POWERLEVEL9K_PUBLIC_IP_BACKGROUND=7
+  # Custom icon.
+  # typeset -g POWERLEVEL9K_PUBLIC_IP_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
   ########################[ vpn_ip: virtual private network indicator ]#########################
   # VPN IP color.
@@ -1618,6 +1607,28 @@ typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%B%F{white}$P9K_IP_IP%f%b'
   ###########[ ip: ip address and bandwidth usage for a specified network interface ]###########
   
   # IP color.
+  
+  typeset -g POWERLEVEL9K_IP_BACKGROUND=253   # blanco
+  typeset -g POWERLEVEL9K_IP_FOREGROUND=0    # negro
+
+
+  #
+  #   Parameter             | Meaning
+  #   ----------------------+-------------------------------------------
+  #   P9K_IP_IP             | IP address
+  #   P9K_IP_INTERFACE      | network interface
+  #   P9K_IP_RX_BYTES       | total number of bytes received
+  #   P9K_IP_TX_BYTES       | total number of bytes sent
+  #   P9K_IP_RX_BYTES_DELTA | number of bytes received since last prompt
+  #   P9K_IP_TX_BYTES_DELTA | number of bytes sent since last prompt
+  #   P9K_IP_RX_RATE        | receive rate (since last prompt)
+  #   P9K_IP_TX_RATE        | send rate (since last prompt)
+#  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='${P9K_IP_RX_RATE:+⇣$P9K_IP_RX_RATE }${P9K_IP_TX_RATE:+⇡$P9K_IP_TX_RATE }$P9K_IP_IP'
+   #typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%38F$P9K_IP_IP'
+
+#### DEFINE COLOR Y LA IP
+
+typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%F{red}%B$P9K_IP_IP%b%f'
 
 #typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%K{white}%F{red}%B$P9K_IP_IP%b%f%k'
 #typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%F{red}$P9K_IP_IP%f'
