@@ -5,7 +5,6 @@ Host popos
 Host xps
     HostName 10.0.4.219
     User natasha
-    Port 2222
 
 Host xps2
 	Hostname 10.0.4.146
