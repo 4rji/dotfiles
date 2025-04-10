@@ -45,8 +45,9 @@ function prompt_hola() {
   # =========================[ Line #1 ]=========================
 hola
 os_icon
-    dir                     # current directory
 ip
+    dir                     # current directory
+
 
 
  #   prompt_char             # prompt symbol
@@ -121,9 +122,9 @@ ip
 
 
 
-typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
+typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
 typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=''
-typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
+typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
 
 
 
