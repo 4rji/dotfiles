@@ -1605,7 +1605,7 @@ ip
   
   # IP color.
   
-  typeset -g POWERLEVEL9K_IP_BACKGROUND=15   # blanco
+  typeset -g POWERLEVEL9K_IP_BACKGROUND=253   # blanco
   typeset -g POWERLEVEL9K_IP_FOREGROUND=0    # negro
 
 
@@ -1624,7 +1624,8 @@ ip
    #typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%38F$P9K_IP_IP'
 
 #### DEFINE COLOR Y LA IP
-typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%K{white}%F{red}%B$P9K_IP_IP%b%f%k'
+typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%F{red}%B$P9K_IP_IP%b%f'
+#typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%K{white}%F{red}%B$P9K_IP_IP%b%f%k'
 #typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%F{red}$P9K_IP_IP%f'
 # Show information for the first network interface whose name matches this regular expression.
   # Run `ifconfig` or `ip -4 a show` to see the names of all network interfaces.
