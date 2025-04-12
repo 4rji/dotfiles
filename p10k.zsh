@@ -14,8 +14,6 @@ function prompt_hola() {
 #### DEFINE COLOR Y LA IP solo mostrando ip, no los numeros de carga y descarga
 #typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%F{white}$P9K_IP_IP%f'
 
-#add a line between lines typed
-add-zsh-hook precmd () { print }
 
 
 
