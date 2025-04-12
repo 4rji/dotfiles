@@ -86,20 +86,20 @@
     "format": "⏻"
   },
   "custom/ip": {
-    "exec": ""$HOME/.config/waybar/ip.sh",
+    "exec": "$HOME/.config/waybar/ip.sh",
     "interval": 5,
     "return-type": "json",
     "format": "{}",
     "class": "custom-ip-address"
   },
   "custom/public-ip": {
-    "exec": "/"$HOME/.config/waybar/public-ip.sh",
+    "exec": "$HOME/.config/waybar/public-ip.sh",
     "interval": 60,
     "return-type": "json",
     "format": "{}"
   },
   "custom/target-ip": {
-    "exec": ""$HOME/.config/waybar/target-ip.sh",
+    "exec": "$HOME/.config/waybar/target-ip.sh",
     "interval": 1,
     "return-type": "json",
     "format": "{}"
