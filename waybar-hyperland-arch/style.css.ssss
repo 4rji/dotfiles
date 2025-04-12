@@ -1,8 +1,8 @@
 * {
   min-height: 0;
   min-width: 0;
-  font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", monospace;
-  font-size: 18px;
+  font-family: Lexend, "JetBrainsMono NFP";
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -30,9 +30,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background-color: #89b4fa;
-  color: #1e1e2e;
-  font-weight: bold;
+  background-color: #1e1e2e;
+  color: #89b4fa;
 }
 
 #workspaces button.urgent {
@@ -54,6 +53,7 @@ window#waybar {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
+  /* background-color: #181825; */
   background-color: #1e1e2e;
 }
 
@@ -113,28 +113,4 @@ window#waybar.empty #window {
 tooltip {
   background-color: #181825;
   border: 2px solid #89b4fa;
-}
-
-#custom-ip-address {
-  padding: 0.3rem 0.6rem;
-  margin: 0.4rem 0.25rem;
-  border-radius: 6px;
-  background-color: #5d7e5a;
-  color: #1e1e2e;
-}
-
-#custom-public-ip {
-  padding: 0.3rem 0.6rem;
-  margin: 0.4rem 0.25rem;
-  border-radius: 6px;
-  background-color: #082d0d;
-  color: #f0f0f0;
-}
-
-#custom-target-ip {
-  padding: 0.3rem 0.6rem;
-  margin: 0.4rem 0.25rem;
-  border-radius: 6px;
-  background-color: #f38ba8;
-  color: #1e1e2e;
 }
