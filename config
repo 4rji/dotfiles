@@ -4,19 +4,14 @@ Host popos
 
 Host xps
     HostName 10.0.4.219
-    User natasha
+    User 4rji
 
-Host xps2
-	Hostname 10.0.4.146
-	User natasha	
-	Port 2222
-
-Host ccdc
+Host ccdc-2
     HostName 192.168.3.2
     User ass
     Port 2244
 
- Host ccdc-ass
+ Host ccdc-1
      Hostname 192.168.142.17
      User ass
      ProxyJump ccdc
@@ -157,3 +152,6 @@ Host coolify-thp
 Host azure
 	Hostname 48.211.160.34
 	User azure
+Host book1
+	Hostname 10.0.4.135
+	User nala
