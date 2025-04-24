@@ -95,7 +95,7 @@ Host kasm-changa
 	User ass
 
 Host arch
-	Hostname 10.0.4.175
+	Hostname 10.0.4.140
 	User 4rji
 
 Host kasm-cjs
@@ -152,6 +152,6 @@ Host coolify-thp
 Host azure
 	Hostname 48.211.160.34
 	User azure
-Host book1
+Host book
 	Hostname 10.0.4.135
 	User nala
