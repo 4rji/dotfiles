@@ -155,3 +155,9 @@ Host azure
 Host book
 	Hostname 10.0.4.135
 	User nala
+Host Coolify
+	Hostname 192.168.44.56
+	User nala
+Host 2910-debian
+	Hostname 192.168.142.188
+	User havi
