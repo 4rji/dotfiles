@@ -35,10 +35,6 @@ Host promox-thp
 	Hostname 192.168.44.44
 	User root
 
-Host bodega
-	Hostname 192.168.44.187
-	User root
-
 Host promox-cdmx
 	Hostname 192.168.99.99
 	User root
@@ -66,10 +62,6 @@ Host lab
 Host lab-debian
         Hostname 192.168.3.5
         User havi   
-
-Host lorox
-	Hostname 192.168.44.124        
-	User panfilo
 
 Host kali-cdmx
 	Hostname 192.168.99.109
@@ -126,25 +118,15 @@ Host kali-mega
 Host coolify-server
 	Hostname 10.0.4.133
 	User ass
-Host kali-M4
-	Hostname 10.0.4.179
-	User natasha
 
 Host debian-thp
 	Hostname 192.168.44.17
-	User nala
-
-Host debian-M4
-	Hostname 10.0.4.10
 	User nala
 
 Host debian-changa
 	Hostname 192.168.88.81
 	User ass
 
-Host Coolify
-	Hostname 192.168.44.56
-	User nala
 
 Host 2910-debian
 	Hostname 192.168.142.188
