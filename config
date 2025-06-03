@@ -44,8 +44,8 @@ Host promox-cdmx
 	User root
 
 Host debian-cdmx
-	Hostname 192.168.99.35
-	User mazapana
+	Hostname 192.168.99.47
+	User nala
 
 Host kali-thp
 	Hostname 192.168.44.214
@@ -72,8 +72,8 @@ Host lorox
 	User panfilo
 
 Host kali-cdmx
-	Hostname 192.168.99.14
-	User mazapana
+	Hostname 192.168.99.109
+	User natasha
 
 Host debian-cjs
 	Hostname 10.0.16.60
