@@ -134,3 +134,6 @@ Host 2910-debian
 Host ccdc-wireguard
 	Hostname 192.168.3.19
 	User ass
+Host book2
+	Hostname 10.0.4.150
+	User book2
