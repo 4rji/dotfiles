@@ -137,3 +137,6 @@ Host ccdc-wireguard
 Host book2
 	Hostname 10.0.4.150
 	User book2
+Host kali-changa
+	Hostname 192.168.88.53
+	User natasha
