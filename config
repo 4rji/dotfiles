@@ -4,7 +4,7 @@ Host popos
 
 Host xps
     HostName 10.0.4.219
-    User 4rji
+    User natasha
 
 Host ccdc-2
     HostName 192.168.3.2
@@ -50,10 +50,6 @@ Host kali-thp
 Host surfito
 	Hostname 10.0.4.83
 	User nala
-
-Host	kali-changa
-	Hostname 192.168.88.75
-	User changa
 
 Host lab
 	Hostname 192.168.3.7
@@ -124,8 +120,8 @@ Host debian-thp
 	User nala
 
 Host debian-changa
-	Hostname 192.168.88.81
-	User ass
+	Hostname 192.168.88.138
+	User nala
 
 
 Host 2910-debian
@@ -135,8 +131,8 @@ Host ccdc-wireguard
 	Hostname 192.168.3.19
 	User ass
 Host book2
-	Hostname 10.0.4.150
+	Hostname 10.0.4.135
 	User book2
 Host kali-changa
-	Hostname 192.168.88.53
+	Hostname 192.168.88.52
 	User natasha
