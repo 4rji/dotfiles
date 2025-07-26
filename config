@@ -136,3 +136,6 @@ Host book2
 Host kali-changa
 	Hostname 192.168.88.52
 	User natasha
+Host openstack
+	Hostname 192.168.3.4
+	User itec
