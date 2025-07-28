@@ -1,32 +1,20 @@
-#
 Host popos
 	HostName 192.168.44.27
 	User nala
-
-Host xps
-    HostName 10.0.4.219
-    User natasha
 
 Host ccdc-2
     HostName 192.168.3.2
     User ass
     Port 2244
 
- Host ccdc-1
-     Hostname 192.168.142.17
+ Host ccdc-1-debian-jump
+     Hostname 192.168.142.141
      User ass
      ProxyJump ccdc-2
 
-
-Host kalicell
-    HostName 10.0.4.130
-    User kali
-
-Host transparente
-	Hostname 10.0.0.12
-	User kali
-	Port 2246
- 
+#Host kalicell
+#    HostName 10.0.4.130
+#    User kali
 
 Host promox-cjs
 	Hostname 10.0.16.20
@@ -52,14 +40,6 @@ Host surfito
 	Hostname 10.0.4.83
 	User nala
 
-Host lab
-	Hostname 192.168.3.7
-	User havi
- 
-Host lab-debian
-        Hostname 192.168.3.5
-        User havi   
-
 Host kali-cdmx
 	Hostname 192.168.99.109
 	User natasha
@@ -80,16 +60,8 @@ Host kasm-changa
 	Hostname 192.168.88.89
 	User ass
 
-Host arch
-	Hostname 10.0.4.140
-	User 4rji
-
 Host kasm-cjs
 	Hostname 10.0.16.162
-	User ass
-
-Host debian-server
-	Hostname 10.0.4.70
 	User ass
 
 Host proxmox-server
@@ -128,7 +100,7 @@ Host debian-changa
 Host 2910-debian
 	Hostname 192.168.142.188
 	User havi
-Host ccdc-wireguard
+Host ccdc-1.2-debian-kasm
 	Hostname 192.168.3.19
 	User ass
 Host book2
@@ -140,3 +112,9 @@ Host kali-changa
 Host openstack
 	Hostname 192.168.3.4
 	User itec
+Host ccdc-1.1-havi-wire
+	Hostname 192.168.142.188
+	User havi
+Host utm-debian
+	Hostname 192.168.64.4
+	User nala
