@@ -115,6 +115,13 @@ Host openstack
 Host ccdc-1.1-havi-wire
 	Hostname 192.168.142.188
 	User havi
+        ProxyJump ass@192.168.3.2:2244
 Host utm-debian
 	Hostname 192.168.64.4
+	User nala
+Host xps-k
+	Hostname 10.0.4.220
+	User natasha
+Host xps-debian
+	Hostname 10.0.4.219
 	User nala
