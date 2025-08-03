@@ -64,9 +64,6 @@ Host kasm-cjs
 	Hostname 10.0.16.162
 	User ass
 
-Host proxmox-server
-	Hostname 192.168.66.66
-	User root
 
 Host proxmox-mega
 	Hostname 192.168.55.55
@@ -80,12 +77,8 @@ Host debian-mega
 	Hostname 192.168.55.138
 	User ass
 
-
 Host kali-mega
 	hostname 192.168.55.77
-	User ass
-Host coolify-server
-	Hostname 10.0.4.133
 	User ass
 
 Host debian-thp
@@ -100,28 +93,35 @@ Host debian-changa
 Host 2910-debian
 	Hostname 192.168.142.188
 	User havi
+
 Host ccdc-1.2-debian-kasm
 	Hostname 192.168.3.19
 	User ass
+
 Host book2
 	Hostname 10.0.4.135
 	User book2
 Host kali-changa
 	Hostname 192.168.88.52
 	User natasha
+
 Host openstack
 	Hostname 192.168.3.4
 	User itec
+	
 Host ccdc-1.1-havi-wire
 	Hostname 192.168.142.188
 	User havi
-        ProxyJump ass@192.168.3.2:2244
+    ProxyJump ass@192.168.3.2:2244
+
 Host utm-debian
 	Hostname 192.168.64.4
 	User nala
+
 Host xps-k
 	Hostname 10.0.4.220
 	User natasha
+
 Host xps-debian
 	Hostname 10.0.4.219
 	User nala
