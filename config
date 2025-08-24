@@ -53,12 +53,8 @@ Host kali-cjs
 	User natasha
 
 Host promox-changa
-	Hostname 192.168.88.171
+	Hostname 192.168.88.88
 	User root
-
-Host kasm-changa
-	Hostname 192.168.88.89
-	User ass
 
 Host kasm-cjs
 	Hostname 10.0.16.162
@@ -86,8 +82,7 @@ Host debian-thp
 	User nala
 
 Host debian-changa
-	Hostname 192.168.88.138
-	User nala
+	Hostname 192.168.88.52
 
 
 Host 2910-debian
@@ -102,7 +97,7 @@ Host book2
 	Hostname 10.0.4.135
 	User book2
 Host kali-changa
-	Hostname 192.168.88.52
+	Hostname 192.168.88.223
 	User natasha
 
 Host openstack
