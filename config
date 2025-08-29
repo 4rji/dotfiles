@@ -94,7 +94,18 @@ Host xps-k
 Host xps-debian
 	Hostname 10.0.4.219
 	User nala
-Host debian-itec
-	Hostname 192.168.3.4
+
+Host itec-debian-production-wire4
 #	Hostname 192.168.141.98
+	Hostname 192.168.3.7
+	User nala
+
+Host itec-frp
+	Hostname 192.168.3.5
+#       Hostname 192.168.142.188
+	User havi
+
+Host itec-2995
+	Hostname 192.168.3.4
+#	Hostname 192.168.141.99
 	User nala
