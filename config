@@ -115,3 +115,6 @@ Host thp-debian-250G
 Host changa-400G
 	Hostname 192.168.88.97
 	User nala
+Host onion
+	Hostname 192.168.88.198
+	User nala
