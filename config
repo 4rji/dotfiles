@@ -112,9 +112,15 @@ Host itec-2995
 Host thp-debian-250G
 	Hostname 192.168.44.157
 	User nala
-Host changa-400G
+Host wazuh-changa
 	Hostname 192.168.88.97
 	User nala
 Host onion
 	Hostname 192.168.88.198
+	User nala
+Host kali-server
+	Hostname 10.0.4.133
+	User natasha
+Host getnala
+	Hostname 10.0.4.125
 	User nala
