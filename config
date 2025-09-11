@@ -1,126 +1,107 @@
-Host popos
-	HostName 192.168.44.27
-	User nala
-
-#Host kalicell
-#    HostName 10.0.4.130
-#    User kali
-
-Host promox-cjs
-	Hostname 10.0.16.20
-	User root
-
-Host promox-thp
-	Hostname 192.168.44.44
-	User root
-
-Host promox-cdmx
-	Hostname 192.168.99.99
-	User root
-
-Host debian-cdmx
-	Hostname 192.168.99.47
-	User nala
-
-Host kali-thp
-	Hostname 192.168.44.214
-	User natasha
-
-Host surfito
-	Hostname 10.0.4.83
-	User nala
-
-Host kali-cdmx
-	Hostname 192.168.99.109
-	User natasha
-
-Host debian-cjs
-	Hostname 10.0.16.60
-	User ass
-
-Host kali-cjs
-	Hostname 10.0.16.154
-	User natasha
-
-Host promox-changa
-	Hostname 192.168.88.88
-	User root
-
-Host kasm-cjs
-	Hostname 10.0.16.162
-	User ass
-
-
-Host proxmox-mega
-	Hostname 192.168.55.55
-	User root
-
-Host debian-55
-	Hostname 192.168.55.143
-	User ass
-
-Host debian-mega
-	Hostname 192.168.55.138
-	User ass
-
-Host kali-mega
-	hostname 192.168.55.77
-	User ass
-
-Host debian-thp
-	Hostname 192.168.44.17
-	User nala
-
-Host debian-changa
-	Hostname 192.168.88.51
-	User nala
-
-Host 2910-debian
-	Hostname 192.168.142.188
-	User havi
-
-Host kali-changa
-	Hostname 192.168.88.223
-	User natasha
-
-Host utm-debian
-	Hostname 192.168.64.4
-	User nala
-
-Host xps-k
-	Hostname 10.0.4.220
-	User natasha
-
-Host xps-debian
-	Hostname 10.0.4.219
-	User nala
-
-Host itec-prod
-#	Hostname 192.168.141.98
-	Hostname 192.168.3.7
-	User nala
-
-Host itec-frp
-	Hostname 192.168.3.5
-#       Hostname 192.168.142.188
-	User havi
-
-Host itec-2995
-	Hostname 192.168.3.4
-#	Hostname 192.168.141.99
-	User nala
-Host thp-debian-250G
-	Hostname 192.168.44.157
-	User nala
-Host wazuh-changa
-	Hostname 192.168.88.97
-	User nala
-Host onion
-	Hostname 192.168.88.198
-	User nala
-Host kali-server
-	Hostname 10.0.4.133
-	User natasha
-Host getnala
-	Hostname 10.0.4.125
-	User nala
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 55,
+  "spacing": 2,
+  "exclusive": true,
+  "gtk-layer-shell": true,
+  "passthrough": false,
+  "fixed-center": true,
+  "font-family": "monospace",
+  "font-size": 14,
+  "modules-left": ["hyprland/workspaces","hyprland/window"],
+  "modules-center": [""],
+  "modules-right": [
+    "custom/ip",
+    "custom/sep",
+    "custom/target-ip",
+    "custom/sep",
+    "custom/public-ip",
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "clock",
+    "clock#simpleclock",
+    "tray",
+    "custom/power"
+  ],
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{id}",
+    "all-outputs": true,
+    "disable-scroll": false,
+    "active-only": false
+  },
+  "hyprland/window": {
+    "format": "{title}"
+  },
+  "tray": {
+    "show-passive-items": true,
+    "spacing": 10
+  },
+  "clock#simpleclock": {
+    "tooltip": false,
+    "format": " {:%H:%M}"
+  },
+  "clock": {
+    "format": " {:L%a %d %b}",
+    "calendar": {
+      "format": {
+        "days": "<span weight='normal'>{}</span>",
+        "months": "<span color='#cdd6f4'><b>{}</b></span>",
+        "today": "<span color='#f38ba8' weight='700'><u>{}</u></span>",
+        "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+        "weeks": "<span color='#a6e3a1'><b>W{}</b></span>"
+      },
+      "mode": "month",
+      "mode-mon-col": 1,
+      "on-scroll": 1
+    },
+    "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "interval": 1
+  },
+  "memory": {
+    "format": " {used:0.1f}Gi"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "  muted",
+    "format-icons": {
+      "headphone": "",
+      "default": [" ", " ", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+  "custom/sep": {
+    "format": "|",
+    "tooltip": false
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout -p layer-shell &",
+    "format": "⏻"
+  },
+  "custom/ip": {
+    "exec": "$HOME/.config/waybar/ip.sh",
+    "interval": 5,
+    "return-type": "json",
+    "format": "{}",
+    "class": "custom-ip-address"
+  },
+  "custom/public-ip": {
+    "exec": "$HOME/.config/waybar/public-ip.sh",
+    "interval": 60,
+    "return-type": "json",
+    "format": "{}"
+  },
+  "custom/target-ip": {
+    "exec": "$HOME/.config/waybar/target-ip.sh",
+    "interval": 1,
+    "return-type": "json",
+    "format": "{}"
+  }
+}
