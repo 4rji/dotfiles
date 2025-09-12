@@ -19,6 +19,7 @@
     "custom/public-ip",
     "cpu",
     "memory",
+    "battery",
     "pulseaudio",
     "clock#simpleclock",
     "tray",
@@ -53,6 +54,21 @@
     "all-outputs": true,
     "disable-scroll": false,
     "active-only": false
+  },
+  "battery": {
+    "tooltip": true,
+    "interval": 5,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time}",
+    "format-icons": [
+      "󰁺", "󰁼", "󰁾", "󰁿", "󰂁", "󰁹"
+    ]
   },
   "hyprland/window": {
     "format": "{title}"

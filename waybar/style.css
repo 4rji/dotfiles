@@ -121,6 +121,8 @@ window#waybar.empty #window { background-color: transparent; }
 #pulseaudio { color: @accent_violet; }
 #pulseaudio.muted { color: @fg_muted; }
 
+#battery { color: #ff4d4f; }
+
 #tray { color: @fg_primary; }
 
 /* Tooltip: holo card */
@@ -164,4 +166,3 @@ tooltip {
     inset 0 0 0 1px rgba(178, 108, 255, 0.45),
     0 0 14px rgba(178, 108, 255, 0.18);
 }
-
