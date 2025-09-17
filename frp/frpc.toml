@@ -1,0 +1,13 @@
+serverAddr = "IP"
+serverPort = 9001
+auth.token       = "secret123121515601ad6as1d5a6=asd91"
+loginFailExit = false
+
+[[proxies]]
+name        = "proxy1"
+type        = "udp"
+localIp    = "127.0.0.1"
+localPort  = 51820
+remotePort = 54415
+transport.useEncryption = true
+transport.useCompression = true
