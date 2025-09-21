@@ -130,3 +130,15 @@ Host goad-thp
 Host frp-cdmx
 	Hostname 192.168.99.51
 	User nala
+Host itec-freedom
+	Hostname 192.168.3.19
+#	Hostname 192.168.140.152
+	User nala
+
+Host debian13-cjs
+	Hostname 10.0.16.94
+	User nala
+
+Host freedom-cjs
+	Hostname 10.0.16.141
+	User nala
