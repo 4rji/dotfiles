@@ -139,5 +139,9 @@ Host freedom-cjs
 	Hostname 10.0.16.141
 	User nala
 Host itec-rockysz
-	Hostname 192.168.3.7
+        #hostname 192.168.140.165
+	Hostname 192.168.3.21
+	User nala
+Host metro
+	Hostname 192.168.3.15
 	User nala
