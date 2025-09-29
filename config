@@ -145,3 +145,6 @@ Host itec-rockysz
 Host metro
 	Hostname 192.168.3.15
 	User nala
+Host kali-thp-4rji
+	Hostname 192.168.44.66
+	User 4rji
