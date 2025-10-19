@@ -1,0 +1,3 @@
+#configuracion de nano. debe de ponerse en home oculto con .nanorc
+set nohelp
+set nowrap
