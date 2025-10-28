@@ -71,9 +71,13 @@ Host debian-thp
 	Hostname 192.168.44.17
 	User nala
 
-Host debian-changa
+Host debian-changa-44G
 	Hostname 192.168.88.51
 	User nala
+
+Host debian-changa
+        Hostname 192.168.88.52
+        User nala
 
 Host 2910-debian
 	Hostname 192.168.142.188
@@ -88,7 +92,7 @@ Host utm-debian
 	User nala
 
 Host xps-debian
-        Hostname 10.0.4.219
+        Hostname 10.0.4.221
         User nala
 
 Host xps-akali
@@ -148,3 +152,7 @@ Host metro
 Host kali-thp-4rji
 	Hostname 192.168.44.66
 	User 4rji
+
+Host metro-transp
+	Hostname 192.168.3.23
+	User nala
