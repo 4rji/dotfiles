@@ -1,0 +1,43 @@
+#luego configuramos DHCP
+# DHCP para Net1 (172.16.101.0/24)
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 default-router '172.16.101.1'
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 name-server '172.16.101.1'
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 domain-name 'CCDCTeam.com'
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 lease '86400'
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 range 0 start '172.16.101.10'
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 range 0 stop '172.16.101.245'
+
+# DHCP para Net2 (172.16.102.0/24)
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 default-router '172.16.102.1'
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 name-server '172.16.102.1'
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 domain-name 'CCDCTeam.com'
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 lease '86400'
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 range 0 start '172.16.102.10'
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 range 0 stop '172.16.102.245'
+
+# DNS forwarding
+set service dns forwarding cache-size '0'
+set service dns forwarding listen-address '172.16.101.1'
+set service dns forwarding listen-address '172.16.102.1'
+set service dns forwarding allow-from '172.16.101.0/24'
+set service dns forwarding allow-from '172.16.102.0/24'
+
+
+# NAT
+set nat source rule 100 outbound-interface name 'eth0'
+set nat source rule 100 source address '172.16.101.0/24'
+set nat source rule 100 translation address masquerade
+
+set nat source rule 101 outbound-interface name 'eth0'
+set nat source rule 101 source address '172.16.102.0/24'
+set nat source rule 101 translation address masquerade
+
+
+# FIREWALL
+set firewall group interface-group WAN interface eth0
+set firewall group interface-group LAN interface eth1
+set firewall group interface-group LAN interface eth2
+
+set firewall group network-group NET-INSIDE-v4 network '172.16.101.0/24'
+set firewall group network-group NET-INSIDE-v4 network '172.16.102.0/24'
+
