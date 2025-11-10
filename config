@@ -92,7 +92,7 @@ Host utm-debian
 	User nala
 
 Host xps-debian
-        Hostname 10.0.4.221
+        Hostname 10.0.4.219
         User nala
 
 Host xps-akali
@@ -155,4 +155,8 @@ Host kali-thp-4rji
 
 Host metro-transp
 	Hostname 192.168.3.23
+	User nala
+
+Host metro-esxi
+	Hostname 192.168.3.25
 	User nala
