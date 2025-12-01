@@ -161,9 +161,14 @@ Host metro-esxi
 	Hostname 192.168.3.25
 	User nala
 Host kali-metro-esxi
-	Hostname 192.168.3.26
+	Hostname 172.16.101.17
 	User metro
+	ProxyJump metro-esxi
+
 Host nextcloud
 	Hostname 10.100.1.190
 	User nala
 	ProxyJump metro-esxi
+Host debian-esxi
+	Hostname 10.0.4.210
+	User nala
