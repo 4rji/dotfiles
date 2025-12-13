@@ -167,3 +167,11 @@ Host nextcloud
 	Hostname 10.100.1.190
 	User nala
 	ProxyJump metro-esxi
+Host kali-palo
+	Hostname 172.20.242.69
+	User metro
+        ProxyJump metro-esxi
+Host kali-ftd
+	Hostname 172.20.240.89
+	User metro
+	ProxyJump metro-esxi
