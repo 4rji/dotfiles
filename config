@@ -99,11 +99,6 @@ Host xps-akali
 	Hostname 10.0.4.220
 	User natasha
 
-Host itec-prod
-#	Hostname 192.168.140.108
-	Hostname 192.168.3.7
-	User nala
-
 Host itec-frp
 	Hostname 192.168.3.5
 #       Hostname 192.168.142.188
@@ -129,10 +124,6 @@ Host goad-thp
 	User nala
 Host frp-cdmx
 	Hostname 192.168.99.51
-	User nala
-Host itec-freedom-1475
-	Hostname 192.168.3.19
-#	Hostname 192.168.140.152
 	User nala
 
 Host debian13-cjs
@@ -182,3 +173,6 @@ Host kali-external
 	Hostname 10.100.1.189
 	User metro
 	ProxyJump metro-esxi
+Host itec-2710win
+	Hostname 192.168.3.28
+	User nala
