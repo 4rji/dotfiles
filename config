@@ -175,3 +175,6 @@ Host kali-ftd
 	Hostname 172.20.240.89
 	User metro
 	ProxyJump metro-esxi
+Host metro-esxi-wireguard
+	Hostname 192.168.3.27
+	User nala
