@@ -1,3 +1,10 @@
+#set ETH0 address from ESXI
+
+configure
+set interfaces ethernet eth0 address 10.100.1.130/24
+set protocols static route 0.0.0.0/0 next-hop 10.100.1.254
+set system name-server 8.8.8.8
+
 #luego configuramos DHCP
 # DHCP para Net1 (172.16.101.0/24)
 set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 default-router '172.16.101.1'
@@ -41,3 +48,28 @@ set firewall group interface-group LAN interface eth2
 set firewall group network-group NET-INSIDE-v4 network '172.16.101.0/24'
 set firewall group network-group NET-INSIDE-v4 network '172.16.102.0/24'
 
+
+commit
+save
+
+
+#to route this public IP 39 for cisco and palo with /26 range
+set protocols static route 172.25.39.0/26 next-hop 172.16.101.240
+set protocols static route 172.25.39.128/26 next-hop 172.16.102.33
+
+commit
+save
+
+
+
+#to allow connections between the subnets inside the firewalls palo and cisco
+configure
+
+# 172.20.242.0/24 está detrás de 172.16.101.240 (NET1)
+set protocols static route 172.20.242.0/24 next-hop 172.16.101.240
+
+# 172.20.240.0/24 está detrás de 172.16.102.33 (NET2)
+set protocols static route 172.20.240.0/24 next-hop 172.16.102.33
+
+commit
+save
