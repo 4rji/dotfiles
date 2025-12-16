@@ -73,3 +73,16 @@ set protocols static route 172.20.240.0/24 next-hop 172.16.102.33
 
 commit
 save
+
+
+
+#To add the Cisco public IP side:
+configure
+set protocols static route 172.25.39.162/32 next-hop 172.16.102.33
+set protocols static route 172.25.39.155/32 next-hop 172.16.102.33
+set protocols static route 172.25.39.140/32 next-hop 172.16.102.33
+set protocols static route 172.25.39.144/32 next-hop 172.16.102.33
+commit
+save
+
+
