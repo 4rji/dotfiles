@@ -102,3 +102,10 @@ save
 exit
 
 
+#To allow trafic between palo and cisco private network
+set protocols static route 172.20.242.0/24 next-hop 172.16.101.240
+set protocols static route 172.20.240.0/24 next-hop 172.16.102.33
+
+
+
+
