@@ -23,7 +23,7 @@ RUN mkdir -p /home/nala/.fx-profile \
  && curl -fsSL https://raw.githubusercontent.com/arkenfox/user.js/master/user.js \
       -o /home/nala/.fx-profile/user.js \
  && cat >> /home/nala/.fx-profile/user.js <<'EOF'
-// extra hardening
+
 user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.resistFingerprinting.randomization.enabled", true);
 
