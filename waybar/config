@@ -1,14 +1,14 @@
 {
   "layer": "bottom",
   "position": "top",
-  "height": 55,
-  "spacing": 2,
+  "height": 31,
+  "spacing": 1,
   "exclusive": true,
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
   "font-family": "monospace",
-  "font-size": 14,
+  "font-size": 17,
   "modules-left": ["hyprland/workspaces","hyprland/window"],
   "modules-center": [""],
   "modules-right": [
@@ -17,6 +17,7 @@
     "custom/target-ip",
     "custom/sep",
     "custom/public-ip",
+    "network",
     "cpu",
     "memory",
     "battery",
@@ -106,6 +107,14 @@
     "format": " ▣ {percentage}%",
     "tooltip": true,
     "tooltip-format": "RAM: {used:0.1f}Gi / {total:0.1f}Gi"
+  },
+  "network": {
+    "interval": 5,
+    "format-wifi": " {essid} ({ifname})",
+    "format-ethernet": "󰈀 {ifname}",
+    "format-disconnected": "󰤭 disconnected",
+    "tooltip": true,
+    "tooltip-format": "{ipaddr}"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
