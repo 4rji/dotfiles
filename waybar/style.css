@@ -21,7 +21,7 @@
   min-height: 0;
   min-width: 0;
   font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", "Noto Sans CJK SC", "Noto Sans SC", "WenQuanYi Micro Hei", "Sarasa Gothic SC", "Source Han Sans SC", monospace;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   color: @fg_primary;
 }
@@ -31,8 +31,8 @@ window#waybar {
               rgba(0, 209, 255, 0.06),
               rgba(178, 108, 255, 0.06))
               ,@space_bg;
-  border-radius: 14px;
-  margin: 8px 10px;
+  border-radius: 10px;
+  margin: 4px 6px;
   box-shadow:
     0 10px 30px rgba(0,0,0,0.45),      /* drop shadow */
     inset 0 0 0 1px rgba(207,233,255,0.04); /* subtle inner line */
@@ -40,14 +40,14 @@ window#waybar {
 
 /* Workspaces: pill buttons with neon accent when active */
 #workspaces button {
-  padding: 8px 14px;
-  margin: 6px 4px;
-  border-radius: 12px;
+  padding: 2px 8px;
+  margin: 2px 2px;
+  border-radius: 9px;
   background: @space_surface;
   color: @fg_primary;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
   transition: all 120ms ease-out;
-  font-size: 24px;
+  font-size: 17px;
   font-weight: 800;
 }
 
@@ -90,9 +90,9 @@ window#waybar {
 #custom-ip,
 #custom-public-ip,
 #custom-target-ip {
-  padding: 6px 10px;
-  margin: 6px 4px;
-  border-radius: 10px;
+  padding: 1px 6px;
+  margin: 2px 2px;
+  border-radius: 8px;
   background: @space_surface;
   box-shadow:
     inset 0 0 0 1px rgba(255,255,255,0.05),
