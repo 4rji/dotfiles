@@ -91,12 +91,12 @@ Host utm-debian
 	Hostname 192.168.64.4
 	User nala
 
-Host xps-debian
+Host xps-arch
         Hostname 10.0.4.219
         User nala
 
 Host xps-akali
-	Hostname 10.0.4.220
+	Hostname 10.0.4.219
 	User natasha
 
 Host itec-frp
@@ -104,8 +104,8 @@ Host itec-frp
 #       Hostname 192.168.142.188
 	User havi
 
-Host thp-debian-250G
-	Hostname 192.168.44.157
+Host archivebox
+	Hostname 192.168.44.156
 	User nala
 Host wazuh-changa
 	Hostname 192.168.88.97
