@@ -10,7 +10,6 @@ RUN apt-get update && \
         libasound2 \
         libpci3 \
         libegl1 \
-    && sed -i '/es_ES.UTF-8/s/^# //g' /etc/locale.gen \
         x11-utils && \
     sed -i '/es_ES.UTF-8/s/^# //g' /etc/locale.gen && \
     locale-gen && \
