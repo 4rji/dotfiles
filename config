@@ -67,10 +67,6 @@ Host kali-mega
 	hostname 192.168.55.77
 	User ass
 
-Host debian-thp
-	Hostname 192.168.44.17
-	User nala
-
 Host debian-changa-44G
 	Hostname 192.168.88.51
 	User nala
@@ -107,6 +103,7 @@ Host itec-frp
 Host archivebox
 	Hostname 192.168.44.156
 	User nala
+#	ProxyJump debian-thp
 Host wazuh-changa
 	Hostname 192.168.88.97
 	User nala
@@ -137,7 +134,7 @@ Host itec-rockysz
         #hostname 192.168.140.165
 	Hostname 192.168.3.21
 	User nala
-Host metro
+Host metro-raspi
 	Hostname 192.168.3.15
 	User nala
 Host kali-thp-4rji
@@ -176,3 +173,10 @@ Host kali-external
 Host itec-2710win
 	Hostname 192.168.3.28
 	User nala
+Host debian-lorox
+	Hostname 192.168.44.26
+	User nala
+Host kali-qemu
+	Hostname 192.168.122.10
+	User nala
+	ProxyJump xps-arch
