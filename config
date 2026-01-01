@@ -178,5 +178,9 @@ Host debian-lorox
 	User nala
 Host kali-qemu
 	Hostname 192.168.122.10
+	User natasha
+	ProxyJump xps-arch
+Host debian-qemu
+	Hostname 192.168.122.185
 	User nala
 	ProxyJump xps-arch
