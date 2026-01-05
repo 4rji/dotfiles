@@ -8,6 +8,16 @@ json_escape() {
   printf "%s" "$1" | sed -e 's/\\\\/\\\\\\\\/g' -e 's/\"/\\\"/g'
 }
 
+# Extrae un valor string por clave en JSON (tolerante a espacios y saltos de linea)
+json_get_string() {
+  KEY="$1"
+  JSON_ONE_LINE=$(printf "%s" "$2" | tr -d '\n')
+  if printf "%s" "$JSON_ONE_LINE" | grep -q "\"$KEY\"[[:space:]]*:[[:space:]]*null"; then
+    return 0
+  fi
+  printf "%s" "$JSON_ONE_LINE" | sed -n "s/.*\"$KEY\"[[:space:]]*:[[:space:]]*\"\\([^\"]*\\)\".*/\\1/p"
+}
+
 CLASS="custom-public-ip"
 
 # IP pública (timeout corto para no bloquear Waybar)
@@ -18,25 +28,20 @@ COUNTRY=""
 COUNTRY_CODE=""
 
 if [ -n "$IP" ]; then
-  # Geolocalización usando ipwho.is (sin token). Limitamos campos para respuesta pequeña
-  GEO_JSON=$(curl -sS -m 4 "https://ipwho.is/$IP?fields=success,city,country,country_code" 2>/dev/null)
-  if echo "$GEO_JSON" | grep -q '"success":true'; then
-    CITY=$(printf "%s" "$GEO_JSON" | sed -n 's/.*"city":"\([^"]*\)".*/\1/p')
-    COUNTRY=$(printf "%s" "$GEO_JSON" | sed -n 's/.*"country":"\([^"]*\)".*/\1/p')
-    COUNTRY_CODE=$(printf "%s" "$GEO_JSON" | sed -n 's/.*"country_code":"\([^"]*\)".*/\1/p')
-  fi
+  # Geolocalización usando ipapi.co (sin token)
+  GEO_JSON=$(curl -sS -m 4 "https://ipapi.co/$IP/json" 2>/dev/null)
+  CITY=$(json_get_string "city" "$GEO_JSON")
+  COUNTRY=$(json_get_string "country_name" "$GEO_JSON")
+  COUNTRY_CODE=$(json_get_string "country_code" "$GEO_JSON")
 
-  # Fallback: si ipwho.is no dio ciudad/código, intenta ipapi.co
+  # Fallback: si ipapi.co no dio ciudad/código, intenta ipinfo.io
   if [ -z "$CITY" ] || [ -z "$COUNTRY_CODE" ]; then
-    ALT_JSON=$(curl -sS -m 4 "https://ipapi.co/$IP/json" 2>/dev/null)
+    ALT_JSON=$(curl -sS -m 4 "https://ipinfo.io/$IP/json" 2>/dev/null)
     if [ -z "$CITY" ]; then
-      CITY=$(printf "%s" "$ALT_JSON" | sed -n 's/.*"city":"\([^"]*\)".*/\1/p')
+      CITY=$(json_get_string "city" "$ALT_JSON")
     fi
     if [ -z "$COUNTRY_CODE" ]; then
-      COUNTRY_CODE=$(printf "%s" "$ALT_JSON" | sed -n 's/.*"country_code":"\([^"]*\)".*/\1/p')
-    fi
-    if [ -z "$COUNTRY" ]; then
-      COUNTRY=$(printf "%s" "$ALT_JSON" | sed -n 's/.*"country_name":"\([^"]*\)".*/\1/p')
+      COUNTRY_CODE=$(json_get_string "country" "$ALT_JSON")
     fi
   fi
 fi

@@ -9,7 +9,7 @@
   "fixed-center": true,
   "font-family": "monospace",
   "font-size": 17,
-  "modules-left": ["hyprland/workspaces","hyprland/window"],
+  "modules-left": ["hyprland/workspaces","custom/plasma-desktop","hyprland/window"],
   "modules-center": [""],
   "modules-right": [
     "custom/ip",
@@ -150,6 +150,12 @@
   "custom/target-ip": {
     "exec": "$HOME/.config/waybar/target-ip.sh",
     "interval": 1,
+    "return-type": "json",
+    "format": "{}"
+  },
+  "custom/plasma-desktop": {
+    "exec": "$HOME/.config/waybar/plasma-desktop.sh",
+    "interval": 2,
     "return-type": "json",
     "format": "{}"
   }
