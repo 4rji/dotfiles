@@ -95,11 +95,6 @@ Host xps-akali
 	Hostname 10.0.4.219
 	User natasha
 
-Host itec-frp
-	Hostname 192.168.3.5
-#       Hostname 192.168.142.188
-	User havi
-
 Host archivebox
 	Hostname 192.168.44.156
 	User nala
@@ -130,10 +125,7 @@ Host debian13-cjs
 Host freedom-cjs
 	Hostname 10.0.16.141
 	User nala
-Host itec-rockysz
-        #hostname 192.168.140.165
-	Hostname 192.168.3.21
-	User nala
+
 Host metro-raspi
 	Hostname 192.168.3.15
 	User nala
