@@ -125,8 +125,11 @@ Host debian13-cjs
 Host freedom-cjs
 	Hostname 10.0.16.141
 	User nala
+Host metro-esxi
+        Hostname 192.168.3.25
+        User nala
 
-Host metro-raspi
+Host raspi-metro
 	Hostname 192.168.3.15
 	User nala
 Host kali-thp-4rji
@@ -135,10 +138,6 @@ Host kali-thp-4rji
 
 Host metro-transp
 	Hostname 192.168.3.23
-	User nala
-
-Host metro-esxi
-	Hostname 192.168.3.25
 	User nala
 Host kali-metro-esxi
 	Hostname 192.168.3.26
