@@ -142,7 +142,7 @@ Host metro-transp
 Host kali-metro-esxi
 	Hostname 192.168.3.26
 	User metro
-Host nextcloud
+Host metro-nextcloud
 	Hostname 10.100.1.190
 	User nala
 	ProxyJump metro-esxi
