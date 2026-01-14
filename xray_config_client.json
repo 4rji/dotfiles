@@ -1,0 +1,46 @@
+{
+  "log": {
+    "logLevel": "none"
+  },
+  "inbounds": [
+    {
+      "port": 1080,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "udp": true
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "docs2.4rji.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "Server-ID-AQUI",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "docs2.4rji.com",
+          "fingerprint": "chrome"
+        },
+        "xhttpSettings": {
+          "path": "/api/stream",
+          "host": "docs2.4rji.com"
+        }
+      }
+    }
+  ]
+}
