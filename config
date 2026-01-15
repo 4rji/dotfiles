@@ -71,9 +71,17 @@ Host debian-changa-44G
 	Hostname 192.168.88.51
 	User nala
 
-Host debian-changa
+Host debian-changa-DDNS
         Hostname 192.168.88.52
         User nala
+
+Host debian-changa
+        Hostname 192.168.88.108
+        User nala
+
+Host debian-nginx
+	Hostname 192.168.88.79
+	User nala
 
 Host 2910-debian
 	Hostname 192.168.142.188
