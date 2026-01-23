@@ -96,7 +96,7 @@ Host utm-debian
 	User nala
 
 Host xps-arch
-        Hostname 10.0.4.219
+        Hostname 10.0.4.220
         User nala
 
 Host xps-akali
@@ -108,7 +108,7 @@ Host archivebox
 	User nala
 #	ProxyJump debian-thp
 Host wazuh-changa
-	Hostname 192.168.88.97
+	Hostname 192.168.88.96
 	User nala
 Host onion
 	Hostname 192.168.88.198
@@ -183,3 +183,7 @@ Host debian-qemu
 	Hostname 192.168.122.185
 	User nala
 	ProxyJump xps-arch
+Host metro-kali
+	Hostname 192.168.3.31 #10.100.1.188 vm 264
+	User natasha
+
