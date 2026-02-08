@@ -187,3 +187,14 @@ Host metro-kali
 	Hostname 192.168.3.31 #10.100.1.188 vm 264
 	User natasha
 
+Host mic2
+	Hostname mic2.4rji.com
+	User simbote
+	Port 2244
+host cell
+	Hostname 10.0.4.90
+	User alarm
+
+Host splunk
+	Hostname 192.168.99.85
+	User nala
