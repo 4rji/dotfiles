@@ -198,3 +198,6 @@ host cell
 Host splunk
 	Hostname 192.168.99.85
 	User nala
+Host splunk_alerts
+	Hostname 192.168.99.73
+	User nala
