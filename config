@@ -23,7 +23,7 @@ Host debian-cdmx
 	User nala
 
 Host kali-thp
-	Hostname 192.168.44.214
+	Hostname 192.168.44.38
 	User natasha
 
 Host surfito
