@@ -35,8 +35,8 @@ Host kali-cdmx
 	User natasha
 
 Host debian-cjs
-	Hostname 10.0.16.60
-	User ass
+	Hostname 10.0.16.93
+	User nala
 
 Host kali-cjs
 	Hostname 10.0.16.154
@@ -198,4 +198,10 @@ Host splunk
 	User nala
 Host splunk_alerts
 	Hostname 192.168.99.73
+	User nala
+Host rocky-thp
+	Hostname 192.168.44.228
+	User nala
+Host debian2-changa
+	Hostname 192.168.88.247
 	User nala
