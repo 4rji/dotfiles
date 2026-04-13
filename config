@@ -117,7 +117,7 @@ Host kali-server
 	Hostname 10.0.4.133
 	User natasha
 Host getnala
-	Hostname 10.0.4.125
+	Hostname 10.0.4.77
 	User nala
 Host frp-cdmx
 	Hostname 192.168.99.51
@@ -206,5 +206,5 @@ Host debian2-changa
 	Hostname 192.168.88.247
 	User nala
 Host thinkpad
-	Hostname 10.0.4.160
+	Hostname 10.0.4.24
 	User natasha
