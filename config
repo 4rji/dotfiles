@@ -18,8 +18,8 @@ Host promox-cdmx
 	Hostname 192.168.99.99
 	User root
 
-Host debian-cdmx
-	Hostname 192.168.99.47
+Host ddns-cdmx
+	Hostname 192.168.99.46
 	User nala
 
 Host kali-thp
@@ -119,8 +119,8 @@ Host kali-server
 Host getnala
 	Hostname 10.0.4.77
 	User nala
-Host frp-cdmx
-	Hostname 192.168.99.51
+Host debian-cdmx
+	Hostname 192.168.99.98
 	User nala
 	
 
@@ -208,3 +208,6 @@ Host debian2-changa
 Host thinkpad
 	Hostname 10.0.4.24
 	User natasha
+Host debian-server
+	Hostname 10.0.4.210
+	User nala
