@@ -211,3 +211,6 @@ Host thinkpad
 Host debian-server
 	Hostname 10.0.4.210
 	User nala
+Host kasm-metro
+	Hostname 192.168.3.32
+	User nala
