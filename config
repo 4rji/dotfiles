@@ -189,9 +189,9 @@ Host mic2
 	Hostname mic2.4rji.com
 	User simbote
 	Port 2244
-host cell
+host dark-monitor
 	Hostname 10.0.4.90
-	User alarm
+	User sysadmin
 
 Host splunk
 	Hostname 192.168.99.85
@@ -209,7 +209,7 @@ Host thinkpad
 	Hostname 10.0.4.24
 	User natasha
 Host debian-server
-	Hostname 10.0.4.210
+	Hostname 10.0.4.100
 	User nala
 Host kasm-metro
 	Hostname 192.168.3.32
