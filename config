@@ -2,9 +2,9 @@ Host popos
 	HostName 192.168.44.27
 	User nala
 
-#Host kalicell
-#    HostName 10.0.4.130
-#    User kali
+Host cell
+    HostName 10.0.4.90
+    User alarm
 
 Host promox-cjs
 	Hostname 10.0.16.20
@@ -214,3 +214,6 @@ Host debian-server
 Host kasm-metro
 	Hostname 192.168.3.32
 	User nala
+Host gps-raspi
+	Hostname 10.0.4.37
+	User natasha
