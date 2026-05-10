@@ -3,18 +3,18 @@ Host popos
 	User nala
 
 Host cell
-    HostName 10.0.4.90
-    User alarm
+        HostName 10.0.4.90
+        User alarm
 
-Host promox-cjs
+Host proxmox-cjs
 	Hostname 10.0.16.20
 	User root
 
-Host promox-thp
+Host proxmox-thp
 	Hostname 192.168.44.44
 	User root
 
-Host promox-cdmx
+Host proxmox-cdmx
 	Hostname 192.168.99.99
 	User root
 
@@ -42,7 +42,7 @@ Host kali-cjs
 	Hostname 10.0.16.154
 	User natasha
 
-Host promox-changa
+Host proxmox-changa
 	Hostname 192.168.88.88
 	User root
 
@@ -193,9 +193,6 @@ host dark-monitor
 	Hostname 10.0.4.90
 	User sysadmin
 
-Host splunk
-	Hostname 192.168.99.85
-	User nala
 Host splunk_alerts
 	Hostname 192.168.99.73
 	User nala
@@ -211,9 +208,9 @@ Host thinkpad
 Host debian-server
 	Hostname 10.0.4.100
 	User nala
-Host kasm-metro
-	Hostname 192.168.3.32
-	User nala
 Host gps-raspi
 	Hostname 10.0.4.37
 	User natasha
+Host kasm-metro
+	Hostname 192.168.3.9
+	User nala
