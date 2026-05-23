@@ -107,6 +107,11 @@ Host archivebox
 	Hostname 192.168.44.156
 	User nala
 #	ProxyJump debian-thp
+Host kasm-metro
+	Hostname 10.100.1.111
+	User nala
+	Proxyjump metro-esxi
+
 Host wazuh-changa
 	Hostname 192.168.88.96
 	User nala
@@ -203,7 +208,7 @@ Host debian2-changa
 	Hostname 192.168.88.247
 	User nala
 Host thinkpad
-	Hostname 10.0.4.24
+	Hostname 10.0.4.160 #10.0.4.24
 	User natasha
 Host debian-server
 	Hostname 10.0.4.100
@@ -211,6 +216,21 @@ Host debian-server
 Host gps-raspi
 	Hostname 10.0.4.37
 	User natasha
-Host kasm-metro
-	Hostname 192.168.3.9
+Host splunk
+	Hostname 192.168.88.231
+	User sysadmin
+	Port 22
+Host rasp-rojo
+	Hostname 10.0.4.107
 	User nala
+	Port 22
+
+Host openstack
+	Hostname 192.168.3.32
+	User nala
+	Port 22
+
+Host raspb
+	Hostname 10.0.4.153
+	User nala
+	Port 22
