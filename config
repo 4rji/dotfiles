@@ -140,9 +140,6 @@ Host metro-esxi
         Hostname 192.168.3.25
         User nala
 
-Host raspi-metro
-	Hostname 192.168.3.15
-	User nala
 Host kali-thp-4rji
 	Hostname 192.168.44.66
 	User 4rji
@@ -234,3 +231,9 @@ Host openstack
 	Hostname 10.0.4.46
 	User nala
 	Port 22
+
+Host gitlab
+	Hostname 10.100.1.88
+	User metro
+	Port 22
+	ProxyJump metro-esxi
