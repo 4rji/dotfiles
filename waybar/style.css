@@ -1,0 +1,173 @@
+/*
+  Space/Futuristic Waybar Theme
+  - Dark nebula background with neon accents
+  - Floating pill modules with soft glow
+  - Keeps all existing modules and scripts
+*/
+
+/* Palette */
+@define-color space_bg #0b0f14;          /* deep space */
+@define-color space_surface rgba(17,24,33,0.65);
+@define-color neon_cyan #00d1ff;
+@define-color neon_violet #b26cff;
+@define-color neon_green #7bf1a8;
+@define-color fg_primary #cfe9ff;
+@define-color fg_muted #7b8ba1;
+/* Precomputed blends (GTK doesn't support color mix()) */
+@define-color accent_cyan #8fe6ff;   /* between neon_cyan and fg */
+@define-color accent_violet #c6b0ff; /* between neon_violet and fg */
+
+* {
+  min-height: 0;
+  min-width: 0;
+  font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", "Noto Sans CJK SC", "Noto Sans SC", "WenQuanYi Micro Hei", "Sarasa Gothic SC", "Source Han Sans SC", monospace;
+  font-size: 17px;
+  font-weight: 600;
+  color: @fg_primary;
+}
+
+window#waybar {
+  background: linear-gradient(90deg,
+              rgba(0, 209, 255, 0.06),
+              rgba(178, 108, 255, 0.06))
+              ,@space_bg;
+  border-radius: 10px;
+  margin: 4px 6px;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.45),      /* drop shadow */
+    inset 0 0 0 1px rgba(207,233,255,0.04); /* subtle inner line */
+}
+
+/* Workspaces: pill buttons with neon accent when active */
+#workspaces button {
+  padding: 2px 8px;
+  margin: 2px 2px;
+  border-radius: 9px;
+  background: @space_surface;
+  color: @fg_primary;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+  transition: all 120ms ease-out;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+#workspaces button:hover {
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 209, 255, 0.45),
+    0 0 12px rgba(0, 209, 255, 0.18);
+  color: @fg_primary;
+}
+
+#workspaces button.active {
+  background: linear-gradient(135deg, rgba(0, 209, 255, 0.22), rgba(178, 108, 255, 0.22));
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 209, 255, 0.70),
+    0 4px 22px rgba(178, 108, 255, 0.32);
+  border: 1px solid rgba(0, 209, 255, 0.35);
+  color: @fg_primary;
+}
+
+#workspaces button.urgent {
+  background: linear-gradient(135deg, rgba(255, 75, 75, 0.25), rgba(255, 150, 150, 0.15));
+  box-shadow: inset 0 0 0 1px rgba(255, 75, 75, 0.6);
+}
+
+/* Generic module pill styling */
+#clock,
+#pulseaudio,
+#custom-logo,
+#custom-power,
+#custom-spotify,
+#custom-notification,
+#cpu,
+#tray,
+#memory,
+#window,
+#mpris,
+#network,
+#battery,
+/* namespaced custom modules by id */
+#custom-ip,
+#custom-public-ip,
+#custom-target-ip,
+#custom-plasma-desktop {
+  padding: 1px 6px;
+  margin: 2px 2px;
+  border-radius: 8px;
+  background: @space_surface;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.05),
+    0 6px 18px rgba(0,0,0,0.35);
+}
+
+#mpris.playing { color: @neon_green; }
+#mpris.paused  { color: @fg_muted; }
+
+/* Separator: faint star-dust line */
+#custom-sep {
+  padding: 0px;
+  color: rgba(207,233,255,0.18);
+}
+
+/* Window title can be subtle */
+#window { color: @fg_muted; }
+window#waybar.empty #window { background-color: transparent; }
+
+/* Accents per module */
+#cpu    { color: @neon_cyan; }
+#memory { color: @neon_violet; }
+#clock  { color: @accent_cyan; }
+#clock.simpleclock { color: @neon_cyan; }
+
+#pulseaudio { color: @accent_violet; }
+#pulseaudio.muted { color: @fg_muted; }
+
+#battery { color: #ff4d4f; }
+
+#tray { color: @fg_primary; }
+
+/* Tooltip: holo card */
+tooltip {
+  background: rgba(12, 18, 26, 0.95);
+  border: 1px solid rgba(0, 209, 255, 0.35);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45), 0 0 18px rgba(178,108,255,0.18);
+}
+
+/* Custom IP modules
+   - Support both custom class (from config) and default ids */
+.custom-ip-address, /* class from config for custom/ip */
+#custom-ip {
+  background: linear-gradient(135deg, rgba(0, 209, 255, 0.16), rgba(123, 241, 168, 0.10));
+  color: @fg_primary;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 209, 255, 0.45),
+    0 4px 14px rgba(0, 209, 255, 0.24);
+}
+
+#custom-public-ip {
+  background: linear-gradient(135deg, rgba(0, 209, 255, 0.12), rgba(178, 108, 255, 0.12));
+  color: @fg_primary;
+  box-shadow:
+    inset 0 0 0 1px rgba(178, 108, 255, 0.45),
+    0 4px 14px rgba(178, 108, 255, 0.22);
+}
+
+#custom-target-ip {
+  background: linear-gradient(135deg, rgba(123, 241, 168, 0.14), rgba(0, 209, 255, 0.10));
+  color: @fg_primary;
+  box-shadow:
+    inset 0 0 0 1px rgba(123, 241, 168, 0.45),
+    0 4px 14px rgba(123, 241, 168, 0.24);
+}
+
+#custom-plasma-desktop {
+  color: @neon_green;
+}
+
+/* Power button: neon emphasis */
+#custom-power {
+  color: @neon_violet;
+  box-shadow:
+    inset 0 0 0 1px rgba(178, 108, 255, 0.45),
+    0 0 14px rgba(178, 108, 255, 0.18);
+}

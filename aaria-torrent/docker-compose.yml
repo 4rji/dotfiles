@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  aria2:
+    image: p3terx/aria2-pro
+    container_name: aria2
+    volumes:
+      - ./downloads:/aria2/downloads
+      - ./conf:/aria2/conf
+    environment:
+      - RPC_SECRET=changeme
+    ports:
+      - "6800:6800"
+      - "443:443"
+      - "443:443/udp"
+    restart: unless-stopped

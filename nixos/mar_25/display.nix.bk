@@ -1,0 +1,19 @@
+{
+  services.xserver.enable = true;
+
+  # Usar GDM como Display Manager
+  services.xserver.displayManager.gdm.enable = true;
+
+  # Habilitar GNOME (nota que sigue en `xserver.desktopManager`)
+  services.xserver.desktopManager.gnome.enable = true;
+
+  # Habilitar Plasma 6 (fuera de `xserver`)
+  services.desktopManager.plasma6.enable = true;
+
+#  programs.ssh.askPassword = lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
+  # Habilitar Hyprland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+}

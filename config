@@ -1,0 +1,239 @@
+Host popos
+	HostName 192.168.44.27
+	User nala
+
+Host cell
+        HostName 10.0.4.90
+        User alarm
+
+Host proxmox-cjs
+	Hostname 10.0.16.20
+	User root
+
+Host proxmox-thp
+	Hostname 192.168.44.44
+	User root
+
+Host proxmox-cdmx
+	Hostname 192.168.99.99
+	User root
+
+Host ddns-cdmx
+	Hostname 192.168.99.46
+	User nala
+
+Host kali-thp
+	Hostname 192.168.44.38
+	User natasha
+
+Host surfito
+	Hostname 10.0.4.83
+	User nala
+
+Host kali-cdmx
+	Hostname 192.168.99.109
+	User natasha
+
+Host debian-cjs
+	Hostname 10.0.16.93
+	User nala
+
+Host kali-cjs
+	Hostname 10.0.16.154
+	User natasha
+
+Host proxmox-changa
+	Hostname 192.168.88.88
+	User root
+
+Host kasm-cjs
+	Hostname 10.0.16.162
+	User ass
+
+
+Host proxmox-mega
+	Hostname 192.168.55.55
+	User root
+
+Host debian-55
+	Hostname 192.168.55.143
+	User ass
+
+Host debian-mega
+	Hostname 192.168.55.138
+	User ass
+
+Host kali-mega
+	hostname 192.168.55.77
+	User ass
+
+Host debian-changa-44G
+	Hostname 192.168.88.51
+	User nala
+
+Host debian-changa-DDNS
+        Hostname 192.168.88.52
+        User nala
+
+Host debian-changa
+        Hostname 192.168.88.108
+        User nala
+
+Host debian-nginx
+	Hostname 192.168.88.79
+	User nala
+
+Host 2910-debian
+	Hostname 192.168.142.188
+	User havi
+
+Host kali-changa
+	Hostname 192.168.88.223
+	User natasha
+
+Host utm-debian
+	Hostname 192.168.64.4
+	User nala
+
+Host xps-debian
+        Hostname 10.0.4.219
+        User nala
+
+Host xps-akali
+#	Hostname 10.0.4.2
+	User natasha
+
+Host archivebox
+	Hostname 192.168.44.156
+	User nala
+#	ProxyJump debian-thp
+Host kasm-metro
+	Hostname 10.100.1.111
+	User nala
+	Proxyjump metro-esxi
+
+Host wazuh-changa
+	Hostname 192.168.88.96
+	User nala
+Host onion
+	Hostname 192.168.88.198
+	User nala
+Host kali-server
+	Hostname 10.0.4.133
+	User natasha
+Host getnala
+	Hostname 10.0.4.77
+	User nala
+Host debian-cdmx
+	Hostname 192.168.99.98
+	User nala
+	
+
+Host debian13-cjs
+	Hostname 10.0.16.94
+	User nala
+
+Host freedom-cjs
+	Hostname 10.0.16.141
+	User nala
+Host metro-esxi
+        Hostname 192.168.3.25
+        User nala
+
+Host kali-thp-4rji
+	Hostname 192.168.44.66
+	User 4rji
+
+Host metro-transp
+	Hostname 192.168.3.23
+	User nala
+Host kali-metro-esxi
+	Hostname 192.168.3.26
+	User metro
+Host metro-nextcloud
+	Hostname 10.100.1.190
+	User nala
+	ProxyJump metro-esxi
+Host kali-palo
+	Hostname 172.20.242.69
+	User metro
+        ProxyJump metro-esxi
+Host kali-ftd
+	Hostname 172.20.240.89
+	User metro
+	ProxyJump metro-esxi
+Host metro-esxi-wireguard
+	Hostname 192.168.3.27
+	User nala
+Host kali-external
+	Hostname 10.100.1.189
+	User metro
+	ProxyJump metro-esxi
+Host itec-2710win
+	Hostname 192.168.3.28
+	User nala
+Host debian-thp
+	Hostname 192.168.44.31
+	User nala
+Host kali-qemu
+	Hostname 192.168.122.10
+	User natasha
+	ProxyJump xps-arch
+Host debian-qemu
+	Hostname 192.168.122.185
+	User nala
+	ProxyJump xps-arch
+Host metro-kali
+	Hostname 192.168.3.31 #10.100.1.188 vm 264
+	User natasha
+
+Host mic2
+	Hostname mic2.4rji.com
+	User simbote
+	Port 2244
+host dark-monitor
+	Hostname 10.0.4.90
+	User sysadmin
+
+Host splunk_alerts
+	Hostname 192.168.99.73
+	User nala
+Host rocky-thp
+	Hostname 192.168.44.228
+	User nala
+Host debian2-changa
+	Hostname 192.168.88.247
+	User nala
+Host thinkpad
+	Hostname 10.0.4.24 #10.0.4.160
+	User natasha
+Host debian-server
+	Hostname 10.0.4.100
+	User nala
+Host gps-raspi
+	Hostname 10.0.4.37
+	User natasha
+Host splunk
+	Hostname 192.168.88.231
+	User sysadmin
+	Port 22
+Host rasp-rojo
+	Hostname 10.0.4.107
+	User nala
+	Port 22
+
+Host raspb
+	Hostname 10.0.4.153
+	User nala
+	Port 22
+
+Host openstack
+	Hostname 10.0.4.46
+	User nala
+	Port 22
+
+Host gitlab
+	Hostname 10.100.1.88
+	User metro
+	Port 22
+	ProxyJump metro-esxi

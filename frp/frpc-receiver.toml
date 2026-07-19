@@ -1,0 +1,17 @@
+serverAddr = "mic2.4rji.com"
+serverPort = 9010
+auth.token       = "secret123121515601ad6as1d5a6=asd91"
+loginFailExit = false
+
+[[proxies]]
+name        = "proxy2"
+type        = "tcp"
+localIp    = "127.0.0.1"
+localPort  = 1235
+remotePort = 1235
+transport.useEncryption = true
+transport.useCompression = true
+
+
+#para recibir archivos en el mismo frpc, en 1235
+#abrir port forwading en el firewall

@@ -1,0 +1,28 @@
+# Firefox aislado en Docker
+
+## dockerfile-weston-firefox
+Ejecuta Firefox dentro de **Weston (Wayland)** con salida por **RDP**, sin compartir X11 del host. Ofrece aislamiento gráfico fuerte, pero es más experimental y menos estable para uso diario.  
+**Uso:** `docker build -t weston-firefox .` → `docker run --rm -p 3389:3389 weston-firefox`  
+**RDP:** conectar a `localhost:3389` con cualquier cliente RDP.
+
+## docker-mini-debian
+Contenedor **Debian mínimo + XRDP + Xfce + Firefox ESR** con **perfil arkenfox endurecido**, Firefox auto-lanzado y destrucción total al cerrar (`--rm`). Más pesado, pero estable y recomendado para navegación “desechable”, funciona bien en Linux y macOS (M1).  
+**Uso:** `docker build -t firefox-rdp .` → `docker run --rm -p 3389:3389 firefox-rdp`  
+**RDP:** conectar a `localhost:3389` (usuario/clave según Dockerfile).
+
+
+docker build -t firefox-rdp .
+docker run --rm -p 3389:3389 firefox-rdp
+
+
+
+usar el script: fxx1 con
+-s start
+-o apagar
+
+#encender por ssh 
+ssh itec-rockysz "docker run --rm -p 3389:3389 firefox-rdp"
+
+#apagar por ssh
+ssh itec-rockysz 'docker stop $(docker ps -q --filter ancestor=firefox-rdp)'
+

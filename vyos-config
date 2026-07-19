@@ -1,0 +1,111 @@
+#set ETH0 address from ESXI
+
+configure
+set interfaces ethernet eth0 address 10.100.1.130/24
+set protocols static route 0.0.0.0/0 next-hop 10.100.1.254
+set system name-server 8.8.8.8
+
+#luego configuramos DHCP
+# DHCP para Net1 (172.16.101.0/24)
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 default-router '172.16.101.1'
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 name-server '172.16.101.1'
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 domain-name 'CCDCTeam.com'
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 lease '86400'
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 range 0 start '172.16.101.10'
+set service dhcp-server shared-network-name NET1 subnet 172.16.101.0/24 range 0 stop '172.16.101.245'
+
+# DHCP para Net2 (172.16.102.0/24)
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 default-router '172.16.102.1'
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 name-server '172.16.102.1'
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 domain-name 'CCDCTeam.com'
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 lease '86400'
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 range 0 start '172.16.102.10'
+set service dhcp-server shared-network-name NET2 subnet 172.16.102.0/24 range 0 stop '172.16.102.245'
+
+# DNS forwarding
+set service dns forwarding cache-size '0'
+set service dns forwarding listen-address '172.16.101.1'
+set service dns forwarding listen-address '172.16.102.1'
+set service dns forwarding allow-from '172.16.101.0/24'
+set service dns forwarding allow-from '172.16.102.0/24'
+
+
+# NAT
+set nat source rule 100 outbound-interface name 'eth0'
+set nat source rule 100 source address '172.16.101.0/24'
+set nat source rule 100 translation address masquerade
+
+set nat source rule 101 outbound-interface name 'eth0'
+set nat source rule 101 source address '172.16.102.0/24'
+set nat source rule 101 translation address masquerade
+
+
+# FIREWALL
+set firewall group interface-group WAN interface eth0
+set firewall group interface-group LAN interface eth1
+set firewall group interface-group LAN interface eth2
+
+set firewall group network-group NET-INSIDE-v4 network '172.16.101.0/24'
+set firewall group network-group NET-INSIDE-v4 network '172.16.102.0/24'
+
+
+commit
+save
+
+
+#to route this public IP 39 for cisco and palo with /26 range
+set protocols static route 172.25.39.0/26 next-hop 172.16.101.240
+set protocols static route 172.25.39.128/26 next-hop 172.16.102.33
+
+commit
+save
+
+
+
+#to allow connections between the subnets inside the firewalls palo and cisco
+configure
+
+# 172.20.242.0/24 está detrás de 172.16.101.240 (NET1)
+set protocols static route 172.20.242.0/24 next-hop 172.16.101.240
+
+# 172.20.240.0/24 está detrás de 172.16.102.33 (NET2)
+set protocols static route 172.20.240.0/24 next-hop 172.16.102.33
+
+commit
+save
+
+
+#didnt work because there are 2 subnets palo and cisco.
+configure
+show protocols static route
+delete protocols static route 172.25.39.0/24
+commit
+save
+exit
+
+
+#To add the Cisco public IP side:
+configure
+set protocols static route 172.25.39.162/32 next-hop 172.16.102.33
+set protocols static route 172.25.39.155/32 next-hop 172.16.102.33
+set protocols static route 172.25.39.140/32 next-hop 172.16.102.33
+set protocols static route 172.25.39.144/32 next-hop 172.16.102.33
+
+
+#to palo 
+set protocols static route 172.25.39.9/32  next-hop 172.16.101.240
+set protocols static route 172.25.39.11/32 next-hop 172.16.101.240
+set protocols static route 172.25.39.39/32 next-hop 172.16.101.240
+
+commit
+save
+exit
+
+
+#To allow trafic between palo and cisco private network
+set protocols static route 172.20.242.0/24 next-hop 172.16.101.240
+set protocols static route 172.20.240.0/24 next-hop 172.16.102.33
+
+
+
+

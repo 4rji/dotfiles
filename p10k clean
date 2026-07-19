@@ -1,0 +1,128 @@
+function prompt_hola() {
+  p10k segment -f 15 -b 28 -t "$host_nombre"
+}
+
+
+#el color de hola esta arriba en la function especificada
+#el color de ip esta abajo de public_ip
+#borrar todo en   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+#para borrar lo de la derecha
+
+#### DEFINE COLOR Y LA IP solo mostrando ip, no los numeros de carga y descarga
+#typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%F{white}$P9K_IP_IP%f'
+
+
+
+() {
+  emulate -L zsh -o extended_glob
+
+  # Unset all configuration options. This allows you to apply configuration changes without
+  # restarting zsh. Edit ~/.p10k.zsh and type `source ~/.p10k.zsh`.
+  unset -m '(POWERLEVEL9K_*|DEFAULT_USER)~POWERLEVEL9K_GITSTATUS_DIR'
+
+  # Zsh >= 5.1 is required.
+  [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
+
+  # The list of segments shown on the left. Fill it with the most important segments.
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+  # =========================[ Line #1 ]=========================
+hola
+os_icon
+dir                     
+ip
+
+ 
+  )
+
+
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+    # =========================[ Line #1 ]=========================
+  )
+
+  typeset -g POWERLEVEL9K_MODE=nerdfont-v3
+  typeset -g POWERLEVEL9K_ICON_PADDING=none
+
+
+  #################################[ os_icon: os identifier ]##################################
+  # OS identifier color.
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=232
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=7
+
+
+typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
+typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=''
+typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
+
+
+  ##################################[ dir: current directory ]##################################
+  # Current directory background color.
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND=4
+  # Default current directory foreground color.
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=254
+  # If directory is too long, shorten some of its segments to the shortest possible unique
+  # prefix. The shortened directory can be tab-completed to the original.
+  typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
+  # Replace removed segment suffixes with this symbol.
+  typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
+  # Color of the shortened directory segments.
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=250
+  # Color of the anchor directory segments. Anchor segments are never shortened. The first
+  # segment is always an anchor.
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=255
+  # Display anchor directory segments in bold.
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
+  # Don't shorten directories that contain any of these files. They are anchors.
+  local anchor_files=(
+    .bzr
+    .citc
+    .git
+    .hg
+    .node-version
+    .python-version
+    .go-version
+    .ruby-version
+    .lua-version
+    .java-version
+    .perl-version
+    .php-version
+    .tool-versions
+    .mise.toml
+    .shorten_folder_marker
+    .svn
+    .terraform
+    CVS
+    Cargo.toml
+    composer.json
+    go.mod
+    package.json
+    stack.yaml
+  )
+
+
+
+#IP HERE
+
+typeset -g POWERLEVEL9K_IP_SHOW_VISUAL_IDENTIFIER=false
+typeset -g POWERLEVEL9K_IP_VISUAL_IDENTIFIER_EXPANSION=
+
+
+unset POWERLEVEL9K_IP_INTERFACE
+typeset -g POWERLEVEL9K_IP_INTERFACE=''
+
+
+#typeset -g POWERLEVEL9K_IP_BACKGROUND=black
+typeset -g POWERLEVEL9K_IP_BACKGROUND=color0
+typeset -g POWERLEVEL9K_IP_FOREGROUND=white
+typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='%B%F{white}$P9K_IP_IP%f%b'
+
+
+
+
+  (( ! $+functions[p10k] )) || p10k reload
+}
+
+# Tell `p10k configure` which file it should overwrite.
+typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
+
+(( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
+'builtin' 'unset' 'p10k_config_opts'

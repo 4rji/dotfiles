@@ -1,0 +1,84 @@
+{ config, pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [
+
+#gvfs
+virt-manager
+qemu
+    wayland
+    xwayland
+    hyprland
+    kdePackages.plasma-desktop
+
+
+
+    hyprshot
+    nerdfetch
+    rofi-wayland
+    waybar
+
+    hyprpaper
+    swww
+    networkmanagerapplet
+    starship
+    ffmpeg
+    pyprland
+    grimblast
+    arp-scan
+    ansible-navigator
+    fuse
+    zsh
+    swaylock
+    gcc
+    rpi-imager
+    stacer
+    figlet
+    lolcat
+    trash-cli
+    kitty
+    tmux
+    fzf
+    github-desktop
+    git
+    wget
+    python3
+    wireguard-tools
+    fail2ban
+    protonvpn-gui
+    bat
+    dash
+    lsd
+    tldr
+    kde-gtk-config
+    sublime
+    iproute2
+    moreutils
+    google-chrome
+    pipx
+    swaynotificationcenter
+    virtualenv
+    distrobox
+    opera
+    brave
+    gparted
+    xclip
+    jq
+    procps
+    yazi
+    lsof
+    python312Packages.pip
+    dig
+    barrier
+    findutils
+    magic-wormhole
+    unzip
+    neovim
+    flameshot
+    powershell
+    feh
+    gh
+    nmap
+    proxychains-ng
+    tree
+  ];
+}

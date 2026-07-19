@@ -1,0 +1,205 @@
+
+# ==========================
+# Neon Mocha — Futurista ⚡
+# ==========================
+
+# Paleta (Catppuccin Mocha)
+source=~/.config/hypr/mocha.conf
+
+# Autostart y cursor
+exec-once = hyprctl setcursor catppuccin-mocha-dark-cursors 28
+exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec-once = waybar & swaync & hyprpaper & hypridle
+
+# Monitores
+# Externo a la izquierda (DP-1) y laptop a la derecha (eDP-1), ambos 1440x960
+monitor=DP-1,1440x960,0x0,1
+#monitor=eDP-1,1440x960,1440x0,1
+monitor=eDP-1,1920x1200,1440x0,1
+
+# Alternativa (derecha/izquierda):
+# Si prefieres el externo (DP-1) a la DERECHA y la laptop (eDP-1) a la IZQUIERDA,
+# comenta las dos líneas anteriores y descomenta estas dos:
+# monitor=DP-1,1440x960,1440x0,1
+# monitor=eDP-1,1440x960,0x0,1
+# Nota: la posición izquierda/derecha la define la X en el tercer campo:
+#  - X=0  -> monitor pegado al borde izquierdo
+#  - X=1440 -> monitor a la derecha del primero (1440 es el ancho del otro monitor)
+
+# Apps
+$terminal = kitty
+$fileManager = dolphin
+$menu = wofi --show drun
+
+# Entorno
+env = XCURSOR_SIZE,24
+env = QT_QPA_PLATFORMTHEME,qt5ct
+
+# Entrada
+input {
+    kb_layout = us
+    kb_options = ctrl:nocaps
+    follow_mouse = 1
+
+    touchpad {
+        natural_scroll = no
+    }
+
+    sensitivity = 1.0
+}
+
+# General — layout y bordes
+general {
+    border_size = 3
+    gaps_in = 6
+    gaps_out = 12
+    layout = dwindle
+    resize_on_border = true
+    allow_tearing = false
+
+    # Borde activo neón (gradiente)
+    col.active_border = $flamingo $mauve $blue $teal 45deg
+    col.inactive_border = $overlay0
+}
+
+# Decoración — redondeo, blur y sombras glow
+decoration {
+    rounding = 12
+
+    blur {
+        enabled = true
+        size = 7
+        passes = 2
+        noise = 0.02
+        contrast = 1.05
+        brightness = 0.95
+        vibrancy = 0.20
+    }
+
+    drop_shadow = yes
+    shadow_range = 25
+    shadow_render_power = 4
+    col.shadow = rgba(11111bcc)
+
+    active_opacity = 1.0
+    inactive_opacity = 0.95
+}
+
+# Animaciones — suaves y futuristas
+animations {
+    enabled = yes, please :)
+
+    bezier = easeOutQuint,0.23,1,0.32,1
+    bezier = easeInOutCubic,0.65,0.05,0.36,1
+    bezier = linear,0,0,1,1
+    bezier = almostLinear,0.5,0.5,0.75,1.0
+    bezier = quick,0.15,0,0.1,1
+
+    animation = global, 1, 10, default
+    animation = border, 1, 5.39, easeOutQuint
+    animation = windows, 1, 4.79, easeOutQuint
+    animation = windowsIn, 1, 4.1, easeOutQuint, popin 87%
+    animation = windowsOut, 1, 1.49, linear, popin 87%
+    animation = fadeIn, 1, 1.73, almostLinear
+    animation = fadeOut, 1, 1.46, almostLinear
+    animation = fade, 1, 3.03, quick
+    animation = layers, 1, 3.81, easeOutQuint
+    animation = layersIn, 1, 4, easeOutQuint, fade
+    animation = layersOut, 1, 1.5, linear, fade
+    animation = fadeLayersIn, 1, 1.79, almostLinear
+    animation = fadeLayersOut, 1, 1.39, almostLinear
+    animation = workspaces, 1, 1.94, almostLinear, fade
+}
+
+# Layout dwindle
+dwindle {
+    pseudotile = yes
+    preserve_split = yes
+}
+
+gestures {
+    workspace_swipe = off
+}
+
+misc {
+    force_default_wallpaper = 0
+}
+
+# Reglas
+windowrulev2 = suppressevent maximize, class:.*
+layerrule = noanim, wofi
+layerrule = blur, wofi
+layerrule = blur, waybar
+
+# Mod principal
+$mainMod = super
+
+# Audio — pactl
+bind = , XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +10%
+bind = , XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -10%
+bind = , XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Brillo — brightnessctl
+bind = , XF86MonBrightnessUp, exec, brightnessctl set +5%
+bind = , XF86MonBrightnessDown, exec, brightnessctl set 5%-
+
+# Lanzadores y gestión de ventanas
+bind = $mainMod, return, exec, $terminal
+bind = $mainMod, C, killactive
+bind = $mainMod, M, exit
+bind = $mainMod, V, togglefloating
+bind = CTRL SHIFT, F, togglefloating
+bind = $mainMod, space, exec, $menu
+bind = $mainMod SHIFT, l, exec, hyprlock
+bind = $mainMod SHIFT, R, exec, hyprctl reload
+bind = $mainMod SHIFT, D, exec, hyprctl keyword monitor eDP-1, disable
+bind = $mainMod SHIFT, F, exec, firefox
+bind = $mainMod SHIFT, C, exec, google-chrome
+bind = $mainMod SHIFT, S, exec, subl
+bind = , Print, exec, hyprshot -m window
+bind = shift, Print, exec, hyprshot -m region
+bind = $mainMod, P, pseudo
+bind = $mainMod, E, togglesplit
+bind = $mainMod, F, fullscreen
+bind = $mainMod, W, togglegroup
+
+# Movimiento del foco
+bind = $mainMod, h, movefocus, l
+bind = $mainMod, l, movefocus, r
+bind = $mainMod, k, movefocus, u
+bind = $mainMod, j, movefocus, d
+
+# Workspaces
+bind = $mainMod, 1, workspace, 1
+bind = $mainMod, 2, workspace, 2
+bind = $mainMod, 3, workspace, 3
+bind = $mainMod, 4, workspace, 4
+bind = $mainMod, 5, workspace, 5
+bind = $mainMod, 6, workspace, 6
+bind = $mainMod, 7, workspace, 7
+bind = $mainMod, 8, workspace, 8
+bind = $mainMod, 9, workspace, 9
+bind = $mainMod, 0, workspace, 10
+
+# Mover ventana al workspace
+bind = $mainMod SHIFT, 1, movetoworkspace, 1
+bind = $mainMod SHIFT, 2, movetoworkspace, 2
+bind = $mainMod SHIFT, 3, movetoworkspace, 3
+bind = $mainMod SHIFT, 4, movetoworkspace, 4
+bind = $mainMod SHIFT, 5, movetoworkspace, 5
+bind = $mainMod SHIFT, 6, movetoworkspace, 6
+bind = $mainMod SHIFT, 7, movetoworkspace, 7
+bind = $mainMod SHIFT, 8, movetoworkspace, 8
+bind = $mainMod SHIFT, 9, movetoworkspace, 9
+bind = $mainMod SHIFT, 0, movetoworkspace, 10
+
+# Workspace especial (scratchpad)
+bind = $mainMod, S, togglespecialworkspace, magic
+
+# Scroll entre workspaces
+bind = $mainMod, mouse_down, workspace, e+1
+bind = $mainMod, mouse_up, workspace, e-1
+
+# Arrastrar/Redimensionar con el ratón
+bindm = $mainMod, mouse:272, movewindow
+bindm = $mainMod, mouse:273, resizewindow

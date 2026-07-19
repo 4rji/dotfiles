@@ -1,0 +1,12 @@
+{
+  "$schema": "https://github.com/toeverything/affine/releases/latest/download/config.schema.json",
+  "copilot": {
+    "enabled": true,
+    "providers": {
+      "openai": {
+        "apiKey": "sk--...",
+        "baseUrl": "https://api.openai.com/v1"
+      }
+    }
+  }
+}

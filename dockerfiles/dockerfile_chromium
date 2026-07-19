@@ -1,0 +1,22 @@
+FROM debian:bookworm-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get install -y \
+      chromium \
+      dbus-x11 \
+      libx11-6 \
+      libx11-xcb1 \
+      libxcb1 \
+      libglib2.0-0 \
+      fonts-dejavu-core \
+      ca-certificates && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Usuario no root
+RUN useradd -m -u 1000 user
+USER user
+WORKDIR /home/user
+
+ENTRYPOINT ["chromium"]

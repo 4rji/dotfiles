@@ -1,0 +1,162 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 31,
+  "spacing": 1,
+  "exclusive": true,
+  "gtk-layer-shell": true,
+  "passthrough": false,
+  "fixed-center": true,
+  "font-family": "monospace",
+  "font-size": 17,
+  "modules-left": ["hyprland/workspaces","custom/plasma-desktop","hyprland/window"],
+  "modules-center": [""],
+  "modules-right": [
+    "custom/ip",
+    "custom/sep",
+    "custom/target-ip",
+    "custom/sep",
+    "custom/public-ip",
+    "network",
+    "cpu",
+    "memory",
+    "battery",
+    "pulseaudio",
+    "clock#simpleclock",
+    "tray",
+    "custom/power"
+  ],
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十",
+      "11": "十一",
+      "12": "十二",
+      "13": "十三",
+      "14": "十四",
+      "15": "十五",
+      "16": "十六",
+      "17": "十七",
+      "18": "十八",
+      "19": "十九",
+      "20": "二十",
+      "default": "〇"
+    },
+    "all-outputs": true,
+    "disable-scroll": false,
+    "active-only": false
+  },
+  "battery": {
+    "tooltip": true,
+    "interval": 5,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time}",
+    "format-icons": [
+      "󰁺", "󰁼", "󰁾", "󰁿", "󰂁", "󰁹"
+    ]
+  },
+  "hyprland/window": {
+    "format": "{title}"
+  },
+  "tray": {
+    "show-passive-items": true,
+    "spacing": 10
+  },
+  "clock#simpleclock": {
+    "tooltip": false,
+    "format": " {:%H:%M}"
+  },
+  "clock": {
+    "format": " {:L%a %d %b}",
+    "calendar": {
+      "format": {
+        "days": "<span weight='normal'>{}</span>",
+        "months": "<span color='#cdd6f4'><b>{}</b></span>",
+        "today": "<span color='#f38ba8' weight='700'><u>{}</u></span>",
+        "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+        "weeks": "<span color='#a6e3a1'><b>W{}</b></span>"
+      },
+      "mode": "month",
+      "mode-mon-col": 1,
+      "on-scroll": 1
+    },
+    "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "interval": 1
+  },
+  "memory": {
+    "format": " ▣ {percentage}%",
+    "tooltip": true,
+    "tooltip-format": "RAM: {used:0.1f}Gi / {total:0.1f}Gi"
+  },
+  "network": {
+    "interval": 5,
+    "format-wifi": " {essid} ({ifname})",
+    "format-ethernet": "󰈀 {ifname}",
+    "format-disconnected": "󰤭 disconnected",
+    "tooltip": true,
+    "tooltip-format": "{ipaddr}"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " ♪ muted",
+    "format-icons": {
+      "headphone": "♪",
+      "default": ["♪", "♫", "♬"]
+    },
+    "on-click": "pavucontrol"
+  },
+  "custom/sep": {
+    "format": "|",
+    "tooltip": false
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout -p layer-shell &",
+    "format": "⏻"
+  },
+  "custom/ip": {
+    "exec": "$HOME/.config/waybar/ip.sh",
+    "interval": 5,
+    "return-type": "json",
+    "format": "{}",
+    "class": "custom-ip-address"
+  },
+  "custom/public-ip": {
+    "exec": "$HOME/.config/waybar/public-ip.sh",
+    "interval": 300,
+    "return-type": "json",
+    "format": "{}"
+  },
+  "custom/target-ip": {
+    "exec": "$HOME/.config/waybar/target-ip.sh",
+    "interval": 1,
+    "return-type": "json",
+    "format": "{}"
+  },
+  "custom/plasma-desktop": {
+    "exec": "$HOME/.config/waybar/plasma-desktop.sh",
+    "interval": 2,
+    "return-type": "json",
+    "format": "{}"
+  }
+}

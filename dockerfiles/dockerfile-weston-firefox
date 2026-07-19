@@ -1,0 +1,38 @@
+FROM debian:bookworm
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt update && apt install -y \
+    weston \
+    firefox-esr \
+    dbus \
+    xwayland \
+    openssl \
+    && rm -rf /var/lib/apt/lists/*
+
+# usuario sin privilegios
+RUN useradd -m user
+USER user
+WORKDIR /home/user
+
+# runtime dir wayland
+ENV XDG_RUNTIME_DIR=/tmp/xdg
+
+# script de arranque: crea cert/key y lanza weston RDP
+CMD /bin/sh -lc '\
+  mkdir -p "$XDG_RUNTIME_DIR" && chmod 700 "$XDG_RUNTIME_DIR" && \
+  CERTDIR="$HOME/.rdp" && \
+  mkdir -p "$CERTDIR" && \
+  if [ ! -f "$CERTDIR/cert.pem" ] || [ ! -f "$CERTDIR/key.pem" ]; then \
+    openssl req -x509 -nodes -newkey rsa:2048 \
+      -keyout "$CERTDIR/key.pem" \
+      -out "$CERTDIR/cert.pem" \
+      -days 365 \
+      -subj "/CN=weston/"; \
+  fi && \
+  weston \
+    --backend=rdp-backend.so \
+    --rdp-tls-cert="$CERTDIR/cert.pem" \
+    --rdp-tls-key="$CERTDIR/key.pem" \
+    --socket=wayland-0 \
+'
