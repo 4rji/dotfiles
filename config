@@ -110,7 +110,7 @@ Host archivebox
 Host kasm-metro
 	Hostname 10.100.1.111
 	User nala
-	Proxyjump metro-esxi
+	ProxyJump metro-esxi
 
 Host wazuh-changa
 	Hostname 192.168.88.96
@@ -272,4 +272,15 @@ Host claude
 Host digi
 	Hostname 172.16.13.129
 	User digi
+	Port 22
+
+Host minh
+	Hostname 172.16.101.73
+	User bao
+	ProxyJump metro-esxi
+	Port 22
+
+Host sandy-bridge
+	Hostname 10.60.16.251
+	User root
 	Port 22
