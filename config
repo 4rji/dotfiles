@@ -206,7 +206,7 @@ Host debian2-changa
 	User nala
 Host thinkpad
 	Hostname 10.0.4.24 #10.0.4.160
-	User natasha
+	User nala
 Host debian-server
 	Hostname 10.0.4.100
 	User nala
@@ -282,5 +282,26 @@ Host minh
 
 Host sandy-bridge
 	Hostname 10.60.16.251
+	User root
+	Port 22
+
+Host trader-esxi
+	Hostname 10.100.1.222
+	User nala
+	Port 22
+	ProxyJump metro-esxi
+
+Host opengear-Proxmox
+	Hostname 10.0.4.144
+	User root
+	Port 22
+
+Host debian-opengear
+	Hostname 10.0.4.92
+	User digi
+	Port 22
+
+Host OM1304-4E-C-CASA
+	Hostname 10.0.4.48
 	User root
 	Port 22
