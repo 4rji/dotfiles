@@ -1,6 +1,7 @@
 function prompt_hola() {
-  gradient_glow "$host_nombre"
+  gradient_glow "${USER} @${host_nombre}"
 }
+
 
 
 
